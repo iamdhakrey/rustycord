@@ -546,34 +546,34 @@ impl Manager {
         }
     }
 
-    async fn event_handler(&self, event: ReceiveEvent) {
-        log::debug!("Shard {} - Event {:?}", self.shard_id, event.t);
-        if event.t == GatewayReceiveEventName::READY {
-            self.ready().await;
-        } else if event.t == GatewayReceiveEventName::MESSAGE_CREATE {
-            self.message_create(event).await
-        }
-    }
+    // async fn event_handler(&self, event: ReceiveEvent) {
+    //     log::debug!("Shard {} - Event {:?}", self.shard_id, event.t);
+    //     if event.t == GatewayReceiveEventName::READY {
+    //         self.ready().await;
+    //     } else if event.t == GatewayReceiveEventName::MESSAGE_CREATE {
+    //         self.message_create(event).await
+    //     }
+    // }
 
-    /// Handle READY event
-    async fn ready(&self) {
-        log::info!("🟢 Shard {} is ready", self.shard_id);
-    }
+    // /// Handle READY event
+    // async fn ready(&self) {
+    //     log::info!("🟢 Shard {} is ready", self.shard_id);
+    // }
 
-    /// Handle Message Create Event
-    async fn message_create(&self, event: ReceiveEvent) {
-        if let Some(data) = event.d.clone() {
-            log::debug!("Shard {} - Message Data: {:?}", self.shard_id, data);
-            let message_result =
-                serde_json::from_str::<ChannelMessage>(&serde_json::to_string(&data).unwrap());
-            match message_result {
-                Ok(message) => {
-                    log::info!("Shard {} - 📩 Message: {:?}", self.shard_id, message);
-                }
-                Err(err) => log::error!("Shard {} - Error parsing message: {}", self.shard_id, err),
-            }
-        }
-    }
+    // /// Handle Message Create Event
+    // async fn message_create(&self, event: ReceiveEvent) {
+    //     if let Some(data) = event.d.clone() {
+    //         log::debug!("Shard {} - Message Data: {:?}", self.shard_id, data);
+    //         let message_result =
+    //             serde_json::from_str::<ChannelMessage>(&serde_json::to_string(&data).unwrap());
+    //         match message_result {
+    //             Ok(message) => {
+    //                 log::info!("Shard {} - 📩 Message: {:?}", self.shard_id, message);
+    //             }
+    //             Err(err) => log::error!("Shard {} - Error parsing message: {}", self.shard_id, err),
+    //         }
+    //     }
+    // }
     /// Send identify message with shard information
     pub async fn send_identify(
         &mut self,
