@@ -5,7 +5,22 @@ use log::LevelFilter;
 use std::fs::File;
 use std::io;
 
-pub fn setup_logger(vervose: String) -> Result<(), Box<dyn std::error::Error>> {
+/// Setup the logger with the specified verbosity level
+///
+/// # Arguments
+/// * `verbose` - The verbosity level: "trace", "debug", "info", "warn", "error"
+///
+/// # Example
+/// ```rust
+/// use rustcord::logger::setup_logger;
+///
+/// // Enable debug logging
+/// setup_logger("debug".to_string()).expect("Failed to initialize logger");
+///
+/// // Enable info logging (recommended for production)
+/// setup_logger("info".to_string()).expect("Failed to initialize logger");
+/// ```
+pub fn setup_logger(verbose: String) -> Result<(), Box<dyn std::error::Error>> {
     // Configure the logger
 
     let colors = ColoredLevelConfig::new()
@@ -15,12 +30,13 @@ pub fn setup_logger(vervose: String) -> Result<(), Box<dyn std::error::Error>> {
         .warn(Color::Yellow)
         .trace(Color::Cyan);
 
-    let level = match vervose.as_str() {
+    let level = match verbose.as_str() {
+        "trace" => LevelFilter::Trace,
         "debug" => LevelFilter::Debug,
         "info" => LevelFilter::Info,
         "warn" => LevelFilter::Warn,
         "error" => LevelFilter::Error,
-        _ => LevelFilter::Warn,
+        _ => LevelFilter::Info, // Default to info instead of warn
     };
 
     let stdout_config = Dispatch::new()
