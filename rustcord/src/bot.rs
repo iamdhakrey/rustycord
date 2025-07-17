@@ -1,4 +1,3 @@
-use log::info;
 use serde::Serialize;
 
 use crate::{
@@ -20,6 +19,12 @@ pub struct BotBase {
 
 impl BotBase {
     pub async fn new(intents: Option<i32>) -> Self {
+        log::debug!("🤖 Creating new BotBase instance");
+        if let Some(intents) = intents {
+            log::debug!("🎯 Bot intents configured: {}", intents);
+        } else {
+            log::debug!("🎯 Bot intents not specified, will use defaults");
+        }
         BotBase {
             intents: intents,
             client: None,
@@ -39,9 +44,10 @@ impl BotBase {
     /// assert_eq!(bot_base, );
     /// ```
     pub async fn login(&mut self, token: String) -> UserResponse {
+        log::info!("🔑 Initializing bot login...");
         let mut _client = Client::new();
         let res = _client.login(token).await;
-        info!("🔒 Logged in as: {:?}", res.username);
+        log::info!("🔒 Logged in as: {:?}", res.username);
         self.client = Some(_client);
         res
     }
@@ -54,8 +60,9 @@ impl BotBase {
     /// * `reconnect` - if the bot should reconnect
     ///
     pub async fn start(&mut self, token: String, reconnect: Option<bool>) -> () {
+        log::info!("🚀 Starting bot...");
         self.login(token).await;
-
+        log::info!("📡 Establishing WebSocket connection...");
         self.connect(self.intents, reconnect).await;
     }
 
@@ -64,12 +71,13 @@ impl BotBase {
     }
 
     pub async fn connect(&mut self, intents: Option<i32>, reconnect: Option<bool>) {
-        // client = Client::new()
+        log::debug!("🌐 Connecting to Discord gateway...");
         self.client
             .as_mut()
             .unwrap()
             .ws_connect(intents, reconnect, None)
             .await;
+        log::info!("✅ Successfully connected to Discord gateway");
     }
 
     pub async fn set_presence(&mut self, presence: PresenceUpdate) {
@@ -86,9 +94,10 @@ impl BotBase {
     // }
     pub async fn run(&mut self, token: String, log_level: Option<String>) -> bool {
         let level: String = log_level.unwrap_or_else(|| "info".to_string());
-
-        // get log level
+        
+        log::info!("⚙️ Initializing logger with level: {}", level);
         let _ = setup_logger(level);
+        log::info!("🤖 RustCord bot starting up...");
         self.start(token, Some(true)).await;
         true
     }
