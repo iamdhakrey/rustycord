@@ -1,4 +1,10 @@
-# Prefix Commands Example
+<div align="center">
+  <img src="../../docs/images/rustcord-favicon.png" alt="RustCord" width="32" height="32">
+  
+  # Prefix Commands Example
+</div>
+
+> **⚠️ DEVELOPMENT NOTICE**: This example uses RustCord, which is in heavy development and NOT ready for production. Use only for learning and experimentation.
 
 This example demonstrates how to use RustCord's prefix command system to create a bot with multiple commands.
 

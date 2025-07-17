@@ -1,5 +1,18 @@
 # Installation
 
+!!! danger "Development Version Warning"
+    **RustCord is currently in heavy development and is NOT ready for production use.**
+    
+    - 🚨 **Breaking changes occur frequently**
+    - 🚨 **APIs are unstable and will change**
+    - 🚨 **Features are incomplete**
+    - 🚨 **Not suitable for production bots**
+    
+    **Only use for learning, experimentation, and development.** Do not deploy bots using this library to production environments.
+
+!!! note "Development Status"
+    This library is actively being developed. While basic functionality works, many features are missing or incomplete. Check the [GitHub repository](https://github.com/iamdhakrey/rustcord) for the latest status.
+
 ## Prerequisites
 
 Before installing RustCord, make sure you have:

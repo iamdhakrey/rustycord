@@ -1,6 +1,30 @@
-# RustCord
+<div align="center">
+  <img src="images/rustcord-logo.png" alt="RustCord Logo" width="128" height="128">
+  
+  # RustCord
+</div>
 
 A fast, lightweight, and feature-rich Discord bot library written in Rust.
+
+!!! warning "Development Notice"
+    **RustCord is currently in heavy development and is NOT ready for production use.**
+    
+    - APIs may change without notice
+    - Features are incomplete and experimental
+    - Breaking changes occur frequently
+    - Documentation may be outdated
+    - Use at your own risk for development/testing only
+    
+    **Do not use this library for production bots yet.** Wait for the stable 1.0 release.
+
+!!! info "Current Status"
+    - ✅ Basic bot functionality working
+    - ✅ Message handling system implemented
+    - ✅ Prefix command system functional
+    - ⚠️ Advanced features under development
+    - ❌ Slash commands not yet implemented
+    - ❌ Voice support not available
+    - ❌ Comprehensive testing needed
 
 ## Overview
 

@@ -2,6 +2,9 @@
 
 This guide will walk you through creating your first Discord bot with RustCord, from setup to deployment.
 
+!!! warning "Development Library Notice"
+    Remember that RustCord is in heavy development. This tutorial is for **learning and experimentation only**. Do not use the resulting bot in production environments.
+
 ## Prerequisites
 
 Make sure you have completed the [installation guide](installation.md) before proceeding.
