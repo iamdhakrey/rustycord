@@ -6,10 +6,7 @@ const GATEWAY_BASE_URL: &str = "wss://gateway.discord.gg/";
 /// This will be used to interact with the Discord Gateway.
 use crate::{
     client::Client,
-    gateway::response::{
-        DiscordOpCode, DiscordReceiveEvent, GatewayReceiveEventName, ReceiveEvent,
-    },
-    message::ChannelMessage,
+    gateway::response::{DiscordOpCode, DiscordReceiveEvent, ReceiveEvent},
 };
 use futures::{SinkExt, StreamExt};
 use serde::{Deserialize, Serialize};
