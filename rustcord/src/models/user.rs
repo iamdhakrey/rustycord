@@ -18,7 +18,7 @@ pub struct User {
     pub avatar_description: Option<String>,
 
     #[serde(default)]
-    pub bot: bool,
+    pub bot: Option<bool>,
     #[serde(default)]
     pub system: bool,
 
