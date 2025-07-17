@@ -1,4 +1,4 @@
-//! # RustCord - Discord Bot Library for Rust
+//! # rustycord - Discord Bot Library for Rust
 //!
 //! ⚠️ **DEVELOPMENT WARNING**: This library is in heavy development and is **NOT ready for production use**.
 //!
@@ -22,7 +22,7 @@
 //! ## Example Usage
 //!
 //! ```rust,no_run
-//! use rustcord::{bot::BotBase, gateway::intents};
+//! use rustycord::{bot::BotBase, gateway::intents};
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {

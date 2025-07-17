@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="../../docs/images/rustcord-favicon.png" alt="RustCord" width="32" height="32">
+  <img src="../../docs/images/rustycord-favicon.png" alt="rustycord" width="32" height="32">
   
   # Prefix Commands Example
 </div>
 
-> **⚠️ DEVELOPMENT NOTICE**: This example uses RustCord, which is in heavy development and NOT ready for production. Use only for learning and experimentation.
+> **⚠️ DEVELOPMENT NOTICE**: This example uses rustycord, which is in heavy development and NOT ready for production. Use only for learning and experimentation.
 
-This example demonstrates how to use RustCord's prefix command system to create a bot with multiple commands.
+This example demonstrates how to use rustycord's prefix command system to create a bot with multiple commands.
 
 ## Features
 
@@ -86,7 +86,7 @@ The math command supports these operators:
 
 When running successfully:
 ```
-🚀 Starting RustCord Prefix Commands Example...
+🚀 Starting rustycord Prefix Commands Example...
 🔑 Logged in as: YourBot#1234
 📝 Registering built-in commands...
 🔧 Registering custom commands...

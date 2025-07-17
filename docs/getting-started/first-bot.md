@@ -1,9 +1,9 @@
 # Your First Bot
 
-This guide will walk you through creating your first Discord bot with RustCord, from setup to deployment.
+This guide will walk you through creating your first Discord bot with rustycord, from setup to deployment.
 
 !!! warning "Development Library Notice"
-    Remember that RustCord is in heavy development. This tutorial is for **learning and experimentation only**. Do not use the resulting bot in production environments.
+    Remember that rustycord is in heavy development. This tutorial is for **learning and experimentation only**. Do not use the resulting bot in production environments.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rustcord = "0.1.0"
+rustycord = "0.1.0"
 tokio = { version = "1.40", features = ["full"] }
 async-trait = "0.1"
 dotenv = "0.15"
@@ -43,7 +43,7 @@ Replace the contents of `src/main.rs`:
 
 ```rust
 use async_trait::async_trait;
-use rustcord::{
+use rustycord::{
     bot::BotBase,
     handlers::message_handler::MessageHandler,
     message::ChannelMessage,
@@ -153,7 +153,7 @@ Let's enhance our bot with multiple commands using the prefix system:
 
 ```rust
 use async_trait::async_trait;
-use rustcord::{
+use rustycord::{
     bot::BotBase,
     handlers::message_handler::MessageHandler,
     prefix::{PrefixListener, PrefixCommand, HelpCommand, PingCommand},
@@ -303,10 +303,10 @@ Now that you have a working bot:
 
 ## Complete Example Repository
 
-You can find complete working examples in the [examples directory](../examples/) of the RustCord repository.
+You can find complete working examples in the [examples directory](../examples/) of the rustycord repository.
 
 ## Getting Help
 
 - Check the [troubleshooting guide](../troubleshooting.md)
 - Browse [API documentation](../api/)
-- Ask questions in [GitHub Discussions](https://github.com/your-username/rustcord/discussions)
+- Ask questions in [GitHub Discussions](https://github.com/your-username/rustycord/discussions)

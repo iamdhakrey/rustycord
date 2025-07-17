@@ -37,7 +37,7 @@ impl BotBase {
     /// # Examples
     ///
     /// ```
-    /// use rustcord::bot::BotBase;
+    /// use rustycord::bot::BotBase;
     ///
     /// let mut bot_base = ;
     /// assert_eq!(bot_base.login(token), );
@@ -94,10 +94,10 @@ impl BotBase {
     // }
     pub async fn run(&mut self, token: String, log_level: Option<String>) -> bool {
         let level: String = log_level.unwrap_or_else(|| "info".to_string());
-        
+
         log::info!("⚙️ Initializing logger with level: {}", level);
         let _ = setup_logger(level);
-        log::info!("🤖 RustCord bot starting up...");
+        log::info!("🤖 rustycord bot starting up...");
         self.start(token, Some(true)).await;
         true
     }

@@ -1,13 +1,13 @@
 <div align="center">
-  <img src="images/rustcord-logo.png" alt="RustCord Logo" width="128" height="128">
+  <img src="images/rustycord-logo.png" alt="rustycord Logo" width="128" height="128">
   
-  # RustCord
+  # rustycord
 </div>
 
 A fast, lightweight, and feature-rich Discord bot library written in Rust.
 
 !!! warning "Development Notice"
-    **RustCord is currently in heavy development and is NOT ready for production use.**
+    **rustycord is currently in heavy development and is NOT ready for production use.**
     
     - APIs may change without notice
     - Features are incomplete and experimental
@@ -28,7 +28,7 @@ A fast, lightweight, and feature-rich Discord bot library written in Rust.
 
 ## Overview
 
-RustCord is a modern Discord bot library that provides a clean, type-safe API for building Discord bots. Built with performance and reliability in mind, it offers comprehensive logging, flexible message handling, and an intuitive event system.
+rustycord is a modern Discord bot library that provides a clean, type-safe API for building Discord bots. Built with performance and reliability in mind, it offers comprehensive logging, flexible message handling, and an intuitive event system.
 
 ## Key Features
 
@@ -44,7 +44,7 @@ RustCord is a modern Discord bot library that provides a clean, type-safe API fo
 ## Quick Start
 
 ```rust
-use rustcord::{Bot, Client, MessageHandler, logger};
+use rustycord::{Bot, Client, MessageHandler, logger};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -69,7 +69,7 @@ struct EchoHandler;
 
 #[async_trait::async_trait]
 impl MessageHandler for EchoHandler {
-    async fn handle_message(&self, message: &rustcord::Message) -> Result<Option<String>, Box<dyn std::error::Error + Send + Sync>> {
+    async fn handle_message(&self, message: &rustycord::Message) -> Result<Option<String>, Box<dyn std::error::Error + Send + Sync>> {
         if message.content.starts_with("!echo ") {
             let response = message.content.strip_prefix("!echo ").unwrap_or("");
             Ok(Some(response.to_string()))
@@ -86,7 +86,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rustcord = "0.1.0"
+rustycord = "0.1.0"
 tokio = { version = "1.0", features = ["full"] }
 ```
 
@@ -109,8 +109,8 @@ Ready to build your first Discord bot? Check out our [Getting Started Guide](get
 
 ## Community
 
-- [GitHub Issues](https://github.com/your-username/rustcord/issues) - Bug reports and feature requests
-- [Discussions](https://github.com/your-username/rustcord/discussions) - Community support
+- [GitHub Issues](https://github.com/your-username/rustycord/issues) - Bug reports and feature requests
+- [Discussions](https://github.com/your-username/rustycord/discussions) - Community support
 
 ## License
 

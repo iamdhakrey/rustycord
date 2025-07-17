@@ -47,7 +47,7 @@ pub struct HTTPClient {
 }
 
 impl HTTPClient {
-    const USER_AGENT: &'static str = "Rustcord dev";
+    const USER_AGENT: &'static str = "rustycord dev";
     const API_URL: &'static str = "https://discord.com/api";
 
     pub fn new() -> Self {

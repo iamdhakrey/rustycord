@@ -1,17 +1,17 @@
-site_name: RustCord
+site_name: rustycord
 site_description: A modern, fast, and easy-to-use Discord bot library for Rust - DEVELOPMENT VERSION - NOT PRODUCTION READY
 site_author: Hrithik Dhakrey
-site_url: https://rustcord.iamdhakrey.dev
+site_url: https://rustycord.iamdhakrey.dev
 
-repo_name: iamdhakrey/rustcord
-repo_url: https://github.com/iamdhakrey/rustcord
+repo_name: iamdhakrey/rustycord
+repo_url: https://github.com/iamdhakrey/rustycord
 edit_uri: edit/main/docs/
 
 theme:
   name: material
   custom_dir: docs/overrides
-  logo: images/rustcord-logo.png
-  favicon: images/rustcord-favicon.png
+  logo: images/rustycord-logo.png
+  favicon: images/rustycord-favicon.png
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -81,16 +81,16 @@ plugins:
 
 extra:
   announce: |
-    🚨 <strong>DEVELOPMENT WARNING</strong>: RustCord is in heavy development and NOT ready for production use. 
+    🚨 <strong>DEVELOPMENT WARNING</strong>: rustycord is in heavy development and NOT ready for production use. 
     APIs change frequently and features are incomplete. Use only for learning and experimentation.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/iamdhakrey
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/rustcord
+      link: https://discord.gg/rustycord
   version:
     provider: github
-    repo: iamdhakrey/rustcord
+    repo: iamdhakrey/rustycord
     branch: main
   status:
     development: true

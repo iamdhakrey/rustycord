@@ -1,6 +1,6 @@
 // main.rs or your entry point
 
-use rustcord::{client::Client, logger::setup_logger};
+use rustycord::{client::Client, logger::setup_logger};
 
 #[tokio::main]
 async fn main() {
@@ -11,7 +11,8 @@ async fn main() {
     let mut client = Client::new();
 
     // Login to Discord
-    let token = "ODM1NzMzMDE2NDY2NDIzODY5.GBaGBM.9tF_H_7FhXO2jPFKDESMmwX1ytvJWYH8mCSbCM".to_string();
+    let token =
+        "ODM1NzMzMDE2NDY2NDIzODY5.GBaGBM.9tF_H_7FhXO2jPFKDESMmwX1ytvJWYH8mCSbCM".to_string();
     client.login(token).await;
 
     // Fetch gateway information

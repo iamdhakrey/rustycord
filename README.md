@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="docs/images/rustcord-logo.png" alt="RustCord Logo" width="128" height="128">
+  <img src="docs/images/rustycord-logo.png" alt="rustycord Logo" width="128" height="128">
   
-  # RustCord 🦀
+  # rustycord 🦀
 </div>
 
-> **⚠️ DEVELOPMENT NOTICE**: RustCord is currently in **heavy development** and is **NOT ready for production use**. APIs may change frequently, features are incomplete, and breaking changes occur regularly. **Do not use for production bots yet.** Wait for the stable 1.0 release.
+> **⚠️ DEVELOPMENT NOTICE**: rustycord is currently in **heavy development** and is **NOT ready for production use**. APIs may change frequently, features are incomplete, and breaking changes occur regularly. **Do not use for production bots yet.** Wait for the stable 1.0 release.
 
 A modern, fast, and easy-to-use Discord bot library for Rust, designed with a focus on simplicity and developer experience.
 
@@ -40,7 +40,7 @@ A modern, fast, and easy-to-use Discord bot library for Rust, designed with a fo
 ### Basic Bot
 
 ```rust
-use rustcord::{bot::Bot, gateway::intents};
+use rustycord::{bot::Bot, gateway::intents};
 
 #[tokio::main]
 async fn main() {
@@ -57,10 +57,10 @@ async fn main() {
 
 ### Logging Configuration
 
-RustCord provides comprehensive logging to help you understand what your bot is doing:
+rustycord provides comprehensive logging to help you understand what your bot is doing:
 
 ```rust
-use rustcord::logger::setup_logger;
+use rustycord::logger::setup_logger;
 
 #[tokio::main]
 async fn main() {
@@ -91,7 +91,7 @@ Example log output:
 ### Message Handler
 
 ```rust
-use rustcord::{
+use rustycord::{
     bot::Bot,
     gateway::intents,
     handlers::message_handler::{MessageHandler, MessageHandlerResult},
@@ -138,7 +138,7 @@ async fn main() {
 ### Built-in Handlers
 
 ```rust
-use rustcord::handlers::message_handler::{PingPongHandler, EchoMessageHandler};
+use rustycord::handlers::message_handler::{PingPongHandler, EchoMessageHandler};
 
 // Add built-in handlers
 handlers.add_handler(PingPongHandler).await;  // Responds to "ping" with "Pong!"
@@ -148,7 +148,7 @@ handlers.add_handler(EchoMessageHandler).await;  // Echoes back all messages
 ### Send Messages with Embeds
 
 ```rust
-use rustcord::embeds::Embed;
+use rustycord::embeds::Embed;
 
 let embed = Embed::new()
     .title("Hello World")
@@ -218,14 +218,14 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rustcord = { git = "https://github.com/iamdhakrey/rustcord" }
+rustycord = { git = "https://github.com/iamdhakrey/rustycord" }
 tokio = { version = "1.0", features = ["full"] }
 async-trait = "0.1"
 ```
 
 ## Development Status 🚧
 
-RustCord is currently in active development. See [PROGRESS.md](./PROGRESS.md) for detailed status.
+rustycord is currently in active development. See [PROGRESS.md](./PROGRESS.md) for detailed status.
 
 ### Completed ✅
 - Basic bot infrastructure
@@ -265,7 +265,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Create an issue for bugs or feature requests
 - Join our Discord server (coming soon)
-- Check the [documentation](https://docs.rs/rustcord) (coming soon)
+- Check the [documentation](https://docs.rs/rustycord) (coming soon)
 
 ## Acknowledgments 🙏
 
@@ -275,4 +275,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ and 🦀 by the RustCord team
+Made with ❤️ and 🦀 by the rustycord team

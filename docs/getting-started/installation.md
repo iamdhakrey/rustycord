@@ -1,7 +1,7 @@
 # Installation
 
 !!! danger "Development Version Warning"
-    **RustCord is currently in heavy development and is NOT ready for production use.**
+    **rustycord is currently in heavy development and is NOT ready for production use.**
     
     - 🚨 **Breaking changes occur frequently**
     - 🚨 **APIs are unstable and will change**
@@ -11,11 +11,11 @@
     **Only use for learning, experimentation, and development.** Do not deploy bots using this library to production environments.
 
 !!! note "Development Status"
-    This library is actively being developed. While basic functionality works, many features are missing or incomplete. Check the [GitHub repository](https://github.com/iamdhakrey/rustcord) for the latest status.
+    This library is actively being developed. While basic functionality works, many features are missing or incomplete. Check the [GitHub repository](https://github.com/iamdhakrey/rustycord) for the latest status.
 
 ## Prerequisites
 
-Before installing RustCord, make sure you have:
+Before installing rustycord, make sure you have:
 
 - **Rust 1.70.0 or later** - [Install Rust](https://rustup.rs/)
 - **Git** - For cloning repositories
@@ -46,9 +46,9 @@ cargo new my-discord-bot
 cd my-discord-bot
 ```
 
-## Adding RustCord Dependency
+## Adding rustycord Dependency
 
-Add RustCord and required dependencies to your `Cargo.toml`:
+Add rustycord and required dependencies to your `Cargo.toml`:
 
 ```toml
 [package]
@@ -57,7 +57,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rustcord = "0.1.0"
+rustycord = "0.1.0"
 tokio = { version = "1.40", features = ["full"] }
 async-trait = "0.1"
 log = "0.4"
@@ -113,7 +113,7 @@ Cargo.lock
 Create a simple test bot in `src/main.rs`:
 
 ```rust
-use rustcord::{Bot, Client, logger};
+use rustycord::{Bot, Client, logger};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -157,7 +157,7 @@ You should see log output indicating your bot has connected to Discord!
 
 ## Next Steps
 
-Now that you have RustCord installed and a basic bot running:
+Now that you have rustycord installed and a basic bot running:
 
 - [Create Your First Bot](first-bot.md) - Build a simple echo bot
 - [Bot Configuration](configuration.md) - Learn about bot settings
@@ -193,7 +193,7 @@ Error: Connection timeout
 If you encounter issues:
 
 1. Check the [troubleshooting guide](../troubleshooting.md)
-2. Search [GitHub Issues](https://github.com/your-username/rustcord/issues)
+2. Search [GitHub Issues](https://github.com/your-username/rustycord/issues)
 3. Create a new issue with:
    - Your Rust version (`rustc --version`)
    - Your operating system

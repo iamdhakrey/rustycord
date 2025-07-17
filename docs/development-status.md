@@ -1,17 +1,17 @@
 <div align="center">
-  <img src="../images/rustcord-favicon.png" alt="RustCord" width="32" height="32">
+  <img src="../images/rustycord-favicon.png" alt="rustycord" width="32" height="32">
 </div>
 
 # ⚠️ Development Status
 
 !!! danger "Not Production Ready"
-    **RustCord is currently in heavy development and should NOT be used for production bots.**
+    **rustycord is currently in heavy development and should NOT be used for production bots.**
     
     This library is experimental, unstable, and subject to frequent breaking changes. Use only for learning, experimentation, and development purposes.
 
 ## Current Development Phase
 
-RustCord is in **Alpha development** with the following characteristics:
+rustycord is in **Alpha development** with the following characteristics:
 
 - 🚨 **Breaking changes occur frequently**
 - 🚨 **APIs are unstable and will change**
@@ -110,7 +110,7 @@ RustCord is in **Alpha development** with the following characteristics:
 
 ## What Works Now
 
-You can use RustCord for:
+You can use rustycord for:
 
 - ✅ **Learning Discord bot development**
 - ✅ **Experimenting with Rust async programming**
@@ -184,11 +184,11 @@ Despite being in development, contributions are welcome:
 - 📚 **Documentation** - Improve guides and examples
 - 🧪 **Testing** - Help test new features
 
-See the [GitHub repository](https://github.com/iamdhakrey/rustcord) for contribution guidelines.
+See the [GitHub repository](https://github.com/iamdhakrey/rustycord) for contribution guidelines.
 
 ## Getting Updates
 
-Stay informed about RustCord development:
+Stay informed about rustycord development:
 
 - ⭐ **Star the repository** for notifications
 - 👀 **Watch releases** for version updates
@@ -197,7 +197,7 @@ Stay informed about RustCord development:
 
 ## Legal Notice
 
-By using RustCord, you acknowledge:
+By using rustycord, you acknowledge:
 
 - This software is provided "as is" without warranty
 - The developers are not responsible for any issues or damages

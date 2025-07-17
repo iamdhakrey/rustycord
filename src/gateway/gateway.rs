@@ -128,7 +128,7 @@ pub enum WebSocketMessageData {
     /// https://discord.com/developers/docs/topics/gateway-events#update-presence
     PresenceUpdate(PresenceUpdate),
 }
-//  "properties": {"$os": "linux", "$browser": "rustcord", "$device": "rustcord"};
+//  "properties": {"$os": "linux", "$browser": "rustycord", "$device": "rustycord"};
 
 #[derive(Debug, Serialize)]
 pub struct WebSocketMessage {
@@ -136,7 +136,7 @@ pub struct WebSocketMessage {
     d: WebSocketMessageData,
 }
 
-pub struct RustCordWebSocketResponse {}
+pub struct rustycordWebSocketResponse {}
 
 pub struct DiscordWebSocket(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
@@ -270,7 +270,7 @@ impl DiscordWebSocket {
 
         log::debug!("📨 Gateway event: {:?} (op: {})", r_event.t, _opcode.op);
 
-        // change discord event to rustcord event
+        // change discord event to rustycord event
         let r_event = ReceiveEvent {
             t: r_event.t,
             s: r_event.s,
@@ -290,10 +290,10 @@ impl DiscordWebSocket {
     /// # Example
     ///
     /// ```rust
-    /// use rustcord::gateway::gateway::WebSocketMessage;
-    /// use rustcord::gateway::gateway::WebSocketMessageData;
-    /// use rustcord::gateway::gateway::DiscordWebSocket;
-    /// use rustcord::gateway::gateway::PresenceUpdate;
+    /// use rustycord::gateway::gateway::WebSocketMessage;
+    /// use rustycord::gateway::gateway::WebSocketMessageData;
+    /// use rustycord::gateway::gateway::DiscordWebSocket;
+    /// use rustycord::gateway::gateway::PresenceUpdate;
     ///
     /// let mut ws = DiscordWebSocket::connect().await.unwrap();
     /// let message = WebSocketMessage {
@@ -381,8 +381,8 @@ impl DiscordWebSocket {
                 intents: int,
                 properties: IdentifyProperties {
                     os: "linux".to_string(),
-                    browser: "rustcord".to_string(),
-                    device: "rustcord".to_string(),
+                    browser: "rustycord".to_string(),
+                    device: "rustycord".to_string(),
                 },
                 compress: compress,
                 large_threshold: large_threshold.unwrap_or(50),
@@ -588,8 +588,8 @@ impl Manager {
                 intents,
                 properties: IdentifyProperties {
                     os: "linux".to_string(),
-                    browser: "rustcord".to_string(),
-                    device: "rustcord".to_string(),
+                    browser: "rustycord".to_string(),
+                    device: "rustycord".to_string(),
                 },
                 compress,
                 large_threshold: large_threshold.unwrap_or(50),

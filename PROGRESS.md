@@ -1,7 +1,7 @@
-# RustCord Progress Tracker
+# rustycord Progress Tracker
 
 ## Project Overview
-RustCord is a Discord bot library for Rust, designed to be a competitor to serenity-rs with a focus on simplicity and ease of use.
+rustycord is a Discord bot library for Rust, designed to be a competitor to serenity-rs with a focus on simplicity and ease of use.
 
 ## Current Status: 🚧 In Development
 
@@ -84,7 +84,7 @@ RustCord is a Discord bot library for Rust, designed to be a competitor to seren
 
 ### Basic Bot Setup
 ```rust
-use rustcord::{bot::Bot, gateway::intents};
+use rustycord::{bot::Bot, gateway::intents};
 
 #[tokio::main]
 async fn main() {
@@ -101,7 +101,7 @@ async fn main() {
 
 ### Logging Configuration
 ```rust
-use rustcord::logger::setup_logger;
+use rustycord::logger::setup_logger;
 
 #[tokio::main]
 async fn main() {
@@ -120,7 +120,7 @@ async fn main() {
 
 ### Message Handler
 ```rust
-use rustcord::handlers::message_handler::{MessageHandler, MessageHandlerResult};
+use rustycord::handlers::message_handler::{MessageHandler, MessageHandlerResult};
 
 struct CustomHandler;
 
@@ -159,10 +159,10 @@ impl EventHandler for Handler {
 }
 ```
 
-### RustCord Style
+### rustycord Style
 ```rust
-// RustCord approach (simplified)
-use rustcord::handlers::message_handler::{MessageHandler, PingPongHandler};
+// rustycord approach (simplified)
+use rustycord::handlers::message_handler::{MessageHandler, PingPongHandler};
 
 // Built-in handlers
 let ping_handler = PingPongHandler;

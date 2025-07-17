@@ -1,11 +1,11 @@
 [package]
-name = "rustcord"
+name = "rustycord"
 version = "0.1.0"
 edition = "2021"
 description = "A fast, lightweight, and feature-rich Discord bot library written in Rust."
 license = "MIT"
-repository = "https://github.com/iamdhakrey/rustcord"
-documentation = "https://rustcord.iamdhakrey.dev"
+repository = "https://github.com/iamdhakrey/rustycord"
+documentation = "https://rustycord.iamdhakrey.dev"
 keywords = ["discord", "bot", "api", "async", "development"]
 categories = ["api-bindings", "asynchronous", "development-tools"]
 readme = "README.md"

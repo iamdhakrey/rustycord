@@ -1,5 +1,5 @@
 use async_trait::async_trait;
-use rustcord::{
+use rustycord::{
     bot::BotBase,
     client::Client,
     gateway::intents,
@@ -185,7 +185,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Get bot token
     let token = std::env::var("DISCORD_TOKEN").expect("DISCORD_TOKEN environment variable not set");
 
-    println!("🚀 Starting RustCord Prefix Commands Example...");
+    println!("🚀 Starting rustycord Prefix Commands Example...");
 
     // Create bot instance with proper intents for message handling
     let intents = intents::ALL_INTENTS;

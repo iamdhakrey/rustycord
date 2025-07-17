@@ -1,6 +1,6 @@
 # Prefix Commands
 
-RustCord provides a powerful prefix-based command system that allows you to easily create and manage bot commands with specific prefixes (like `!`, `?`, or custom prefixes).
+rustycord provides a powerful prefix-based command system that allows you to easily create and manage bot commands with specific prefixes (like `!`, `?`, or custom prefixes).
 
 ## Overview
 
@@ -16,7 +16,7 @@ The prefix command system consists of:
 ### 1. Create a Prefix Listener
 
 ```rust
-use rustcord::prefix::PrefixListener;
+use rustycord::prefix::PrefixListener;
 use std::sync::Arc;
 
 // Create a listener for "!" prefix
@@ -29,7 +29,7 @@ let case_listener = Arc::new(PrefixListener::new_case_sensitive("!"));
 ### 2. Register Built-in Commands
 
 ```rust
-use rustcord::prefix::{HelpCommand, PingCommand, EchoPrefixCommand};
+use rustycord::prefix::{HelpCommand, PingCommand, EchoPrefixCommand};
 
 // Register built-in commands
 listener.register_command("help", Box::new(HelpCommand::new(listener.clone()))).await;
@@ -41,8 +41,8 @@ listener.register_command("echo", Box::new(EchoPrefixCommand)).await;
 
 ```rust
 use async_trait::async_trait;
-use rustcord::prefix::PrefixCommand;
-use rustcord::message::ChannelMessage;
+use rustycord::prefix::PrefixCommand;
+use rustycord::message::ChannelMessage;
 
 struct InfoCommand;
 
@@ -77,7 +77,7 @@ listener.register_command("info", Box::new(InfoCommand)).await;
 ### 4. Integrate with Message Handler
 
 ```rust
-use rustcord::handlers::message_handler::MessageHandler;
+use rustycord::handlers::message_handler::MessageHandler;
 
 struct PrefixMessageHandler {
     listener: Arc<PrefixListener>,

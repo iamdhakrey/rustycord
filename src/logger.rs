@@ -12,7 +12,7 @@ use std::io;
 ///
 /// # Example
 /// ```rust
-/// use rustcord::logger::setup_logger;
+/// use rustycord::logger::setup_logger;
 ///
 /// // Enable debug logging
 /// setup_logger("debug".to_string()).expect("Failed to initialize logger");

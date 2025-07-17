@@ -1,4 +1,4 @@
-use rustcord::{
+use rustycord::{
     bot::Bot,
     client::Client,
     embeds::Embed,
@@ -71,7 +71,7 @@ async fn main() {
     // "info"  - Important events only (recommended for production)
     // "warn"  - Only warnings and errors
     // "error" - Only error messages
-    rustcord::logger::setup_logger("debug".to_string()).expect("Failed to initialize logger");
+    rustycord::logger::setup_logger("debug".to_string()).expect("Failed to initialize logger");
 
     // Replace with your actual bot token
     let token = "Token".to_string();

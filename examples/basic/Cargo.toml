@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rustcord = { path = "../../rustcord" }
+rustycord = { path = "../../rustycord" }
 tokio = { version = "1.40.0", features = ["full"] }

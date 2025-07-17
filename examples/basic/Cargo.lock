@@ -80,7 +80,7 @@ checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
 name = "basic_example"
 version = "0.1.0"
 dependencies = [
- "rustcord",
+ "rustycord",
  "tokio",
 ]
 
@@ -992,7 +992,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "719b953e2095829ee67db738b3bfa9fa368c94900df327b3f07fe6e794d2fe1f"
 
 [[package]]
-name = "rustcord"
+name = "rustycord"
 version = "0.1.0"
 dependencies = [
  "async-trait",

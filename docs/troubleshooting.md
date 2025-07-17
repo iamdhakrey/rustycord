@@ -1,6 +1,6 @@
-# Troubleshooting RustCord
+# Troubleshooting rustycord
 
-Common issues and solutions when using RustCord.
+Common issues and solutions when using rustycord.
 
 ## Bot Not Responding to Commands
 
@@ -28,7 +28,7 @@ Common issues and solutions when using RustCord.
 
 4. **Update your code** to use proper intents:
    ```rust
-   use rustcord::gateway::intents;
+   use rustycord::gateway::intents;
    
    // Include message-related intents
    let intents = intents::GUILDS | intents::GUILD_MESSAGES | intents::MESSAGE_CONTENT;
