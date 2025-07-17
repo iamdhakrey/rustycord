@@ -5,10 +5,10 @@ const GATEWAY_BASE_URL: &str = "wss://gateway.discord.gg/";
 /// The WebSocket connection to the Discord Gateway.
 /// This will be used to interact with the Discord Gateway.
 use crate::{
+    client::Client,
     gateway::response::{
         DiscordOpCode, DiscordReceiveEvent, GatewayReceiveEventName, ReceiveEvent,
     },
-    http::HTTPClient,
     message::ChannelMessage,
 };
 use futures::{SinkExt, StreamExt};
@@ -236,17 +236,42 @@ impl DiscordWebSocket {
 
     /// receive message from the gateway in json format
     pub async fn recv(&mut self) -> Result<(Option<ReceiveEvent>, bool), String> {
+        log::trace!("🔄 Waiting for message from Discord gateway...");
         let message = self.0.next().await.unwrap().unwrap();
         let message = match message {
-            Message::Text(text) => text,
-            _ => "".to_string(),
+            Message::Text(text) => {
+                log::trace!(
+                    "📥 Received text message from gateway (length: {} chars)",
+                    text.len()
+                );
+                text
+            }
+            Message::Binary(data) => {
+                log::debug!(
+                    "📥 Received binary message from gateway (length: {} bytes)",
+                    data.len()
+                );
+                String::from_utf8_lossy(&data).to_string()
+            }
+            Message::Close(close_frame) => {
+                log::warn!("🔒 Received close frame from gateway: {:?}", close_frame);
+                return Err("Connection closed by Discord".to_string());
+            }
+            _ => {
+                log::debug!("📥 Received non-text message from gateway");
+                "".to_string()
+            }
         };
         if message.is_empty() {
             return Err("🔴 -> Error receiving message".to_string());
         }
+
+        log::trace!("🔍 Parsing gateway message...");
         let _opcode = from_str::<ReceiveMessageOpcode>(message.as_str()).unwrap();
 
         let r_event = from_str::<DiscordReceiveEvent>(message.as_str()).unwrap();
+
+        log::debug!("📨 Gateway event: {:?} (op: {})", r_event.t, _opcode.op);
 
         // change discord event to rustcord event
         let r_event = ReceiveEvent {
@@ -294,12 +319,18 @@ impl DiscordWebSocket {
 
     /// send heartbeat to the gateway every 5 seconds
     pub async fn send_heartbeat(&mut self) -> bool {
+        log::debug!("💓 Sending heartbeat to Discord gateway");
         let heartbeat = WebSocketMessage {
             op: Self::HEARTBEAT,
             d: WebSocketMessageData::Heartbeat(251),
         };
-        // log::debug!("💓 -> Sending heartbeat");
-        self.send_json(heartbeat).await
+        let result = self.send_json(heartbeat).await;
+        if result {
+            log::trace!("💓 Heartbeat sent successfully");
+        } else {
+            log::error!("💔 Failed to send heartbeat");
+        }
+        result
     }
 
     /// send identify message to the gateway to authenticate the client
@@ -323,12 +354,16 @@ impl DiscordWebSocket {
         presence: Option<PresenceUpdate>,
     ) {
         let int: i32 = match intents {
-            Some(int) => int,
+            Some(int) => {
+                log::debug!("🎯 Using provided intents: {}", int);
+                int
+            }
             None => {
                 log::warn!("No intents provided using default");
                 1
             }
         };
+        log::debug!("🎭 Setting up presence and activity...");
         let pre = presence.unwrap_or_else(|| PresenceUpdate {
             since: 0,
             activities: vec![Activity {
@@ -341,6 +376,7 @@ impl DiscordWebSocket {
             afk: false,
         });
         let shr: Vec<i32> = shard.unwrap_or_else(|| vec![0, 1]);
+        log::debug!("🗂️ Using shard configuration: {:?}", shr);
         let identify = WebSocketMessage {
             op: DiscordWebSocket::IDENTIFY,
             d: WebSocketMessageData::Identify {
@@ -404,6 +440,7 @@ pub struct Manager {
     pub intents: i32,
     shard_id: usize,
     pub total_shards: usize,
+    pub client: Option<Client>,
 }
 
 impl Manager {
@@ -421,7 +458,12 @@ impl Manager {
             intents,
             shard_id,
             total_shards,
+            client: None,
         }
+    }
+
+    pub fn set_client(&mut self, client: Client) {
+        self.client = Some(client);
     }
 
     /// return false if heartbeat is not required to send to the gateway
@@ -495,7 +537,13 @@ impl Manager {
     }
     /// Dispatch events to handlers
     async fn dispatch(&self, event: ReceiveEvent) {
-        self.event_handler(event).await;
+        if let Some(client) = &self.client {
+            if let Err(e) = client.event_dispatcher.dispatch_event(&event, client).await {
+                log::error!("Error dispatching event: {:?}", e);
+            }
+        } else {
+            log::warn!("No client available for event dispatching");
+        }
     }
 
     async fn event_handler(&self, event: ReceiveEvent) {
@@ -518,50 +566,13 @@ impl Manager {
             log::debug!("Shard {} - Message Data: {:?}", self.shard_id, data);
             let message_result =
                 serde_json::from_str::<ChannelMessage>(&serde_json::to_string(&data).unwrap());
-            // println!("{:?}", message_result);
             match message_result {
                 Ok(message) => {
                     log::info!("Shard {} - 📩 Message: {:?}", self.shard_id, message);
-                    self.send_message(message).await
                 }
                 Err(err) => log::error!("Shard {} - Error parsing message: {}", self.shard_id, err),
             }
         }
-    }
-
-    async fn send_message(&self, message: ChannelMessage) {
-        log::info!("Shard {} - Sending Message: {:?}", self.shard_id, message);
-        let endpoint = format!("channels/{}/messages", message.channel_id);
-        let client = HTTPClient::new();
-        let new_message = r#"
-        {
-            "content": "Hello, World!",
-            "tts": false,
-            "embeds": [{
-              "title": "Hello, Embed!",
-              "description": "This is an embedded message."
-            }]
-        }
-        "#;
-        client
-            .post(
-                endpoint,
-                serde_json::to_string(&new_message).unwrap(),
-                self.token.clone(),
-            )
-            .await;
-        // match res {
-        //     Ok(res) => {
-        //         if res.status().is_success() {
-        //             log::info!("Shard {} - Message Sent", self.shard_id);
-        //         } else {
-        //             log::error!("Shard {} - Error sending message", self.shard_id);
-        //         }
-        //     }
-        //     Err(err) => {
-        //         log::error!("Shard {} - Error sending message: {:?}", self.shard_id, err);
-        //     }
-        // }
     }
     /// Send identify message with shard information
     pub async fn send_identify(
