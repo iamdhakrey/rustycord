@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+async-trait = "0.1"
 chrono = "0.4.38"
 fern = { version = "0.6.2", features = ["chrono", "colored"] }
 flate2 = { version = "1.0.34", features = ["zlib"] }
