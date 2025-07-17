@@ -5,8 +5,10 @@ use tokio::{signal, sync::Mutex};
 
 use crate::{
     gateway::{gateway::PresenceUpdate, shard_manager::ShardManager},
-    http::HTTPClient,
+    http::{HTTPClient, MessageResponse},
     response::UserResponse,
+    handlers::event_dispatcher::EventDispatcher,
+    embeds::Embed,
 };
 
 #[derive(Clone)]
@@ -14,6 +16,7 @@ pub struct Client {
     pub token: Option<String>,
     pub http: HTTPClient,
     pub shard_manager: Option<Arc<Mutex<ShardManager>>>, // Add ShardManager
+    pub event_dispatcher: Arc<EventDispatcher>,
 }
 
 impl Client {
@@ -22,6 +25,7 @@ impl Client {
             token: None,
             http: HTTPClient::new(),
             shard_manager: None,
+            event_dispatcher: Arc::new(EventDispatcher::new()),
         }
     }
 
@@ -33,6 +37,26 @@ impl Client {
 
     pub async fn get_gateway(&self) -> String {
         self.http.get_gateway().await
+    }
+
+    /// Send a message to a channel
+    pub async fn send_message(&self, channel_id: &str, content: &str, embeds: Option<Vec<Embed>>) -> Result<MessageResponse, Box<dyn std::error::Error + Send + Sync>> {
+        self.http.send_message(channel_id, content, embeds).await
+    }
+
+    /// Send a simple text message to a channel
+    pub async fn send_text_message(&self, channel_id: &str, content: &str) -> Result<MessageResponse, Box<dyn std::error::Error + Send + Sync>> {
+        self.send_message(channel_id, content, None).await
+    }
+
+    /// Send a message with embeds to a channel
+    pub async fn send_embed_message(&self, channel_id: &str, embeds: Vec<Embed>) -> Result<MessageResponse, Box<dyn std::error::Error + Send + Sync>> {
+        self.send_message(channel_id, "", Some(embeds)).await
+    }
+
+    /// Get the event dispatcher for registering message handlers
+    pub fn get_event_dispatcher(&self) -> Arc<EventDispatcher> {
+        self.event_dispatcher.clone()
     }
 
     /// Initialize the Shard Manager with the desired number of shards
