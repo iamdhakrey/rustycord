@@ -187,3 +187,118 @@ pub struct EmbedField {
     /// whether or not this field should display inline
     pub inline: Option<bool>,
 }
+
+impl Embed {
+    /// Create a new embed with default values
+    pub fn new() -> Self {
+        Self {
+            title: None,
+            r#type: EmbedType::rich,
+            description: None,
+            url: None,
+            timestamp: None,
+            color: None,
+            footer: None,
+            image: None,
+            thumbnail: None,
+            video: None,
+            provider: None,
+            author: None,
+            fields: None,
+        }
+    }
+
+    /// Set the title of the embed
+    pub fn title(mut self, title: &str) -> Self {
+        self.title = Some(title.to_string());
+        self
+    }
+
+    /// Set the description of the embed
+    pub fn description(mut self, description: &str) -> Self {
+        self.description = Some(description.to_string());
+        self
+    }
+
+    /// Set the color of the embed
+    pub fn color(mut self, color: i32) -> Self {
+        self.color = Some(color);
+        self
+    }
+
+    /// Set the URL of the embed
+    pub fn url(mut self, url: &str) -> Self {
+        self.url = Some(url.to_string());
+        self
+    }
+
+    /// Set the timestamp of the embed
+    pub fn timestamp(mut self, timestamp: &str) -> Self {
+        self.timestamp = Some(timestamp.to_string());
+        self
+    }
+
+    /// Set the footer of the embed
+    pub fn footer(mut self, text: &str, icon_url: Option<&str>) -> Self {
+        self.footer = Some(EmbedFooter {
+            text: text.to_string(),
+            icon_url: icon_url.map(|s| s.to_string()),
+            proxy_icon_url: None,
+        });
+        self
+    }
+
+    /// Set the author of the embed
+    pub fn author(mut self, name: &str, url: Option<&str>, icon_url: Option<&str>) -> Self {
+        self.author = Some(EmbedAuthor {
+            name: Some(name.to_string()),
+            url: url.map(|s| s.to_string()),
+            icon_url: icon_url.map(|s| s.to_string()),
+            proxy_icon_url: None,
+        });
+        self
+    }
+
+    /// Add a field to the embed
+    pub fn field(mut self, name: &str, value: &str, inline: bool) -> Self {
+        let field = EmbedField {
+            name: name.to_string(),
+            value: value.to_string(),
+            inline: Some(inline),
+        };
+        
+        match self.fields {
+            Some(ref mut fields) => fields.push(field),
+            None => self.fields = Some(vec![field]),
+        }
+        self
+    }
+
+    /// Set the image of the embed
+    pub fn image(mut self, url: &str) -> Self {
+        self.image = Some(EmbedImage {
+            url: Some(url.to_string()),
+            proxy_url: None,
+            height: None,
+            width: None,
+        });
+        self
+    }
+
+    /// Set the thumbnail of the embed
+    pub fn thumbnail(mut self, url: &str) -> Self {
+        self.thumbnail = Some(EmbedThumbnail {
+            url: Some(url.to_string()),
+            proxy_url: None,
+            height: None,
+            width: None,
+        });
+        self
+    }
+}
+
+impl Default for Embed {
+    fn default() -> Self {
+        Self::new()
+    }
+}
