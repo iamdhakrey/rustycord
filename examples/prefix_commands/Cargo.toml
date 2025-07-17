@@ -1,8 +1,11 @@
 [package]
-name = "basic_example"
+name = "prefix_commands"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rustcord = { path = "../../rustcord" }
+rustcord = { path = "../../" }
 tokio = { version = "1.40.0", features = ["full"] }
+async-trait = "0.1"
+log = "0.4"
+dotenv = "0.15"

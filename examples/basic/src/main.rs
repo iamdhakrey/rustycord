@@ -1,20 +1,21 @@
 use rustcord::{bot::Bot, gateway::intents};
-
 use tokio;
 
 #[tokio::main]
 async fn main() {
-    let token =
-        "ODM1NzMzMDE2NDY2NDIzODY5.GBaGBM.9tF_H_7FhXO2jPFKDESMmwX1ytvJWYH8mCSbCM".to_string();
+    // Initialize logging - Users can set this to "trace", "debug", "info", "warn", or "error"
+    // "debug" will show detailed information about what RustCord is doing
+    // "info" is recommended for production (shows important events only)
+    // "trace" shows the most detailed logging including message contents
 
-    // new bot implementation using Bot struct
+    let token = "Token".to_string();
+
+    // Create bot with MESSAGE_CONTENT intent
     let intent = intents::ALL_INTENTS;
 
-    Bot::builder(Some(intent))
-            .await
-            .run(token, Some("info".to_string()))
-            .await;
-    loop {
-        tokio::time::sleep(tokio::time::Duration::from_secs(60)).await;
-    }
+    let mut bot = Bot::builder(Some(intent)).await;
+
+    // Start the bot with debug logging enabled
+    // Change "debug" to "info" for production use
+    bot.run(token, Some("debug".to_string())).await;
 }
