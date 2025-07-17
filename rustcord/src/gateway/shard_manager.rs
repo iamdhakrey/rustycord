@@ -39,13 +39,12 @@ impl ShardManager {
             let large_threshold = Some(50);
             let shard = Some(vec![shard_id as i32, self.total_shards as i32]);
             let presence = presense.clone(); // Initialize with your desired presence if any
-
-            // Clone necessary data for the shard
-            // let client_clone = self.client.clone();
+            let client = self.client.clone();
 
             // Spawn each shard as a separate task
             let shard_task = async move {
                 let mut shard_manager = Manager::new(token.clone(), intents, shard_id, self.total_shards).await;
+                shard_manager.set_client(client);
                 shard_manager.send_identify(
                     token,
                     intents,
