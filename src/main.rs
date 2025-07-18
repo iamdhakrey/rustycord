@@ -11,8 +11,7 @@ async fn main() {
     let mut client = Client::new();
 
     // Login to Discord
-    let token =
-        "ODM1NzMzMDE2NDY2NDIzODY5.GBaGBM.9tF_H_7FhXO2jPFKDESMmwX1ytvJWYH8mCSbCM".to_string();
+    let token = "Token".to_string();
     client.login(token).await;
 
     // Fetch gateway information
