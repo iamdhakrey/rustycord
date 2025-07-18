@@ -1,7 +1,6 @@
 <div align="center">
   <img src="images/rustycord-logo.png" alt="rustycord Logo" width="128" height="128">
   
-  # rustycord
 </div>
 
 A fast, lightweight, and feature-rich Discord bot library written in Rust.
