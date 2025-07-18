@@ -257,6 +257,23 @@ Contributions are welcome! Areas where help is needed:
 - Performance optimization
 - Example projects
 
+### Development Commands
+
+```bash
+# Quick development commands
+make help           # Show all available commands
+make build          # Build the project
+make test           # Run tests
+make docs           # Build documentation
+make serve-docs     # Serve docs locally
+
+# Release commands (maintainers only)
+make release-dry    # Preview what a release would do
+make release-patch  # Create a patch release
+make release-minor  # Create a minor release
+make release-major  # Create a major release
+```
+
 ## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
