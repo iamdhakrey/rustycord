@@ -6,7 +6,7 @@
 A fast, lightweight, and feature-rich Discord bot library written in Rust.
 
 !!! warning "Development Notice"
-    **rustycord is currently in heavy development and is NOT ready for production use.**
+    **RustyCord is currently in heavy development and is NOT ready for production use.**
     
     - APIs may change without notice
     - Features are incomplete and experimental
