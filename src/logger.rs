@@ -11,7 +11,7 @@ use std::io;
 /// * `verbose` - The verbosity level: "trace", "debug", "info", "warn", "error"
 ///
 /// # Example
-/// ```rust
+/// ```no_run
 /// use rustycord::logger::setup_logger;
 ///
 /// // Enable debug logging

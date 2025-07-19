@@ -177,15 +177,12 @@ pub struct MessageActivity {
     ///
     /// Message Activity Types
     ///     
-    ///     Type =Value
-    ///
-    ///     JOIN = 1
-    ///
-    ///     SPECTATE = 2
-    ///
-    ///     LISTEN = 3
-    ///
-    ///     JOIN_REQUEST = 5
+    /// | Type | Value |
+    /// |------|-------|
+    /// | JOIN | 1 |
+    /// | SPECTATE | 2 |
+    /// | LISTEN | 3 |
+    /// | JOIN_REQUEST | 5 |
     pub r#type: i32,
 
     /// party_id from a Rich Presence event

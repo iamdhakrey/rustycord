@@ -136,7 +136,7 @@ pub struct WebSocketMessage {
     d: WebSocketMessageData,
 }
 
-pub struct rustycordWebSocketResponse {}
+pub struct RustycordWebSocketResponse {}
 
 pub struct DiscordWebSocket(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
@@ -289,18 +289,12 @@ impl DiscordWebSocket {
     ///
     /// # Example
     ///
-    /// ```rust
-    /// use rustycord::gateway::gateway::WebSocketMessage;
+    /// ```no_run
     /// use rustycord::gateway::gateway::WebSocketMessageData;
-    /// use rustycord::gateway::gateway::DiscordWebSocket;
-    /// use rustycord::gateway::gateway::PresenceUpdate;
     ///
-    /// let mut ws = DiscordWebSocket::connect().await.unwrap();
-    /// let message = WebSocketMessage {
-    ///    op: 1,
-    ///   d: WebSocketMessageData::Heartbeat(251),
-    /// };
-    /// ws.send_json(message).await;
+    /// // Example of creating message data for heartbeat
+    /// let heartbeat_data = WebSocketMessageData::Heartbeat(251);
+    /// println!("Created heartbeat message data: {:?}", heartbeat_data);
     /// ```
     pub async fn send_json(&mut self, message: WebSocketMessage) -> bool {
         let message = Message::Text(serde_json::to_string(&message).unwrap());

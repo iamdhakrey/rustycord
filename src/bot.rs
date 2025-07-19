@@ -36,12 +36,15 @@ impl BotBase {
     ///
     /// # Examples
     ///
-    /// ```
+    /// ```no_run
     /// use rustycord::bot::BotBase;
     ///
-    /// let mut bot_base = ;
-    /// assert_eq!(bot_base.login(token), );
-    /// assert_eq!(bot_base, );
+    /// # #[tokio::main]
+    /// # async fn main() {
+    /// let mut bot_base = BotBase::new(None).await;
+    /// let result = bot_base.login("your_token_here".to_string()).await;
+    /// println!("Login result: {:?}", result);
+    /// # }
     /// ```
     pub async fn login(&mut self, token: String) -> UserResponse {
         log::info!("🔑 Initializing bot login...");
