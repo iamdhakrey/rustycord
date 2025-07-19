@@ -5,6 +5,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2025-07-19
+
+### ✨ Features
+- feat: add RustyCord release script
+- feat: add initial changelog for project documentation
+- feat: add Makefile for development commands
+- feat: add comprehensive documentation and development warnings
+- feat: enhance documentation with usage examples and development warnings
+- feat: add package metadata and documentation assets
+- feat: add troubleshooting guide and prefix command implementation
+- feat: add comprehensive documentation for installation and usage of RustCord
+- feat: update README.md with comprehensive bot setup and logging configuration
+- feat: Implement ShardManager for managing Discord shards
+- feat: update async-trait dependency to version 0.1.88 and increment Cargo.lock version
+- feat: enhance logging in BotBase methods for better traceability
+- feat: enhance Client struct with event dispatcher and message sending methods
+- feat: implement builder methods for Embed struct
+- feat: enhance HTTP client with message sending functionality
+- feat: enhance Discord WebSocket handling with improved logging and client integration
+- feat: add handlers module to the project
+- feat: add message handler and event dispatcher modules
+- feat: implement event dispatcher and message handler registry
+
+### 🐛 Bug Fixes
+- fix: Fix doctest compilation errors and naming convention
+- fix: replace hardcoded Discord token with placeholder
+- fix: correct capitalization in development notice
+- fix: clone client for shard tasks to ensure proper task execution
+- fix: change bot field to optional in User model
+
+### 📝 Other Changes
+- refactor: remove unused test cases and related structures from prefix.rs
+- docs: add development commands section to README.md
+- chore: remove obsolete source files and Cargo.toml
+- chore: replace old images with new branding assets for rustycord
+- Rename project from RustCord to rustycord, updating all references in documentation, examples, and source code. Adjusted package metadata, logos, and URLs to reflect the new name. Ensured consistency across all files, including Cargo.toml, README.md, and various documentation files. Updated example projects to use the new library name and verified that all instances of the old name were replaced.
+- chore: update mkdocs configuration for development version
+- chore: update .gitignore to include .env and log files
+- refactor: remove unused imports from gateway module
+- refactor: comment out event handling methods in Manager implementation
+- Add prefix commands example with custom commands and setup instructions
+- docs: update logger setup documentation and fix parameter typo
+- initiate project
 ## [Unreleased]
 
 ### Added
