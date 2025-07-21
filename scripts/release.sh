@@ -343,7 +343,7 @@ publish_to_cargo() {
     fi
     
     log_step "Publishing to crates.io..."
-    if cargo publish; then
+    if cargo publish --allow-dirty; then
         log_success "Published to crates.io"
     else
         log_error "Failed to publish to crates.io"
