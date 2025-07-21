@@ -193,7 +193,7 @@ Error: Connection timeout
 If you encounter issues:
 
 1. Check the [troubleshooting guide](../troubleshooting.md)
-2. Search [GitHub Issues](https://github.com/your-username/rustycord/issues)
+2. Search [GitHub Issues](https://github.com/iamdhakrey/rustycord/issues)
 3. Create a new issue with:
    - Your Rust version (`rustc --version`)
    - Your operating system

@@ -108,8 +108,8 @@ Ready to build your first Discord bot? Check out our [Getting Started Guide](get
 
 ## Community
 
-- [GitHub Issues](https://github.com/your-username/rustycord/issues) - Bug reports and feature requests
-- [Discussions](https://github.com/your-username/rustycord/discussions) - Community support
+- [GitHub Issues](https://github.com/iamdhakrey/rustycord/issues) - Bug reports and feature requests
+- [Discussions](https://github.com/iamdhakrey/rustycord/discussions) - Community support
 
 ## License
 

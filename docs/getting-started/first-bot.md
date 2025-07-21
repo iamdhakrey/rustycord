@@ -309,4 +309,4 @@ You can find complete working examples in the [examples directory](../examples/)
 
 - Check the [troubleshooting guide](../troubleshooting.md)
 - Browse [API documentation](../api/)
-- Ask questions in [GitHub Discussions](https://github.com/your-username/rustycord/discussions)
+- Ask questions in [GitHub Discussions](https://github.com/iamdhakrey/rustycord/discussions)

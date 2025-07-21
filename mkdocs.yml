@@ -106,6 +106,14 @@ nav:
     - Installation: getting-started/installation.md
     - Your First Bot: getting-started/first-bot.md
   - User Guide:
+    - Bot Basics: user-guide/bot-basics.md
     - Prefix Commands: user-guide/prefix-commands.md
+  - Examples:
+    - Basic Bot: examples/basic-bot.md
+    - Message Handlers: examples/message-handler.md
+    - Rich Embeds: examples/embeds.md
+    - Logging Setup: examples/logging.md
+  - API Reference:
+    - Client: api/client.md
   - Brand Assets: assets.md
   - Troubleshooting: troubleshooting.md
