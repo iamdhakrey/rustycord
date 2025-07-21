@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2025-07-21
+
+### 📝 Other Changes
+- docs: update documentation links to use angle brackets
+- docs: update links in documentation to use angle brackets
+- docs: update README and index files with project badges and title
+- chore: update rustycord version to 0.1.2 in Cargo.lock
 ## [0.1.2] - 2025-07-21
 
 ### ✨ Features

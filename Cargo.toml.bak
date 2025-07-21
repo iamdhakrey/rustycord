@@ -1,6 +1,6 @@
 [package]
 name = "rustycord"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "A fast, lightweight, and feature-rich Discord bot library written in Rust."
 license = "MIT"
@@ -11,7 +11,9 @@ categories = ["api-bindings", "asynchronous", "development-tools"]
 readme = "README.md"
 
 [package.metadata.docs.rs]
-rustdoc-args = ["--html-before-content", "docs-warning.html"]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--html-before-content", "docs-warning.html"]
+targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
 async-trait = "0.1"
