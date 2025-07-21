@@ -35,43 +35,82 @@ rustycord is a Discord bot library for Rust, designed to be a competitor to sere
 - [x] Message sending endpoints
 - [x] Error handling and logging
 
-### 🔄 In Progress
+### � High Priority (v0.1.x - Essential Core Features)
 
-#### Enhanced Features
-- [ ] Command framework with prefix support
-- [ ] Slash command support
-- [ ] Message reactions handling
-- [ ] Guild and channel management
-- [ ] Voice channel support
-- [ ] File attachment handling
+#### Core Client Features
+- [ ] **Rate limit handling** - Critical for preventing 429 errors
+- [ ] **Connection reconnection and resuming** - Essential for stability
+- [ ] **Message editing and deletion** - Basic messaging completeness
+- [ ] **Message reply functionality** - Modern messaging requirement
+- [ ] **Error handling improvements** - Better developer experience
+
+#### Basic Rich Content
+- [ ] **Enhanced embed management** - Core rich messaging
+- [ ] **File attachment handling** - Essential messaging feature
+- [ ] **Message reactions handling** - User interaction basics
+
+### 🔄 Medium Priority (v0.2.x - Extended Functionality)
+
+#### Command System
+- [ ] **Command framework with prefix support** - Bot command foundation
+- [ ] **Slash command support** - Modern Discord bot standard
+- [ ] **Command permissions and restrictions** - Security and control
+
+#### Server Management Basics
+- [ ] **Guild and channel management** - Server administration basics
+- [ ] **Role management and permissions** - Access control
+- [ ] **Member management** (kick, ban, timeout) - Moderation basics
 
 #### Developer Experience
 - [x] Comprehensive logging system (trace, debug, info, warn, error levels)
 - [x] Logging guide and documentation
 - [x] Enhanced debugging capabilities
-- [ ] Comprehensive documentation
-- [ ] More example projects
-- [ ] Integration tests
-- [ ] Performance optimization
-- [ ] Error handling improvements
+- [ ] **Comprehensive documentation** - User adoption critical
+- [ ] **More example projects** - Learning resources
+- [ ] **Integration tests** - Quality assurance
 
-### 📋 Planned Features
+### 📋 Lower Priority (v0.3.x+ - Advanced Features)
 
-#### Core Features
-- [ ] Interaction handling (buttons, select menus)
-- [ ] Modal dialog support
-- [ ] Webhook management
-- [ ] Rate limiting handling
-- [ ] Cache system implementation
-- [ ] Database integration helpers
+#### Advanced Messaging
+- [ ] **Message threading support** - Advanced conversations
+- [ ] **Bulk message deletion** - Moderation efficiency
+- [ ] **Message history retrieval** - Data access
+- [ ] **Webhook management** - External integrations
 
-#### Advanced Features
-- [ ] Auto-moderation tools
-- [ ] Custom emoji handling
-- [ ] Thread support
-- [ ] Stage channel support
-- [ ] Application commands
-- [ ] Message components
+#### Interaction System
+- [ ] **Message components** (buttons, select menus) - Rich interactions
+- [ ] **Modal dialog support** - Complex user input
+- [ ] **Context menus** - Enhanced UX
+
+#### Voice Features
+- [ ] **Voice channel support** - Audio communication
+- [ ] **Voice connection management** - Real-time audio
+- [ ] **Audio streaming and playback** - Media functionality
+
+#### Advanced Server Management
+- [ ] **Thread support** - Organized conversations
+- [ ] **Forum channels** - Community discussions
+- [ ] **Stage channel support** - Live events
+- [ ] **Auto-moderation tools** - Automated server management
+
+### 🔮 Future Priority (v1.0+ - Ecosystem Features)
+
+#### Performance & Scalability
+- [ ] **Cache system implementation** - Performance optimization
+- [ ] **Shard management for large bots** - Scalability
+- [ ] **Connection pooling** - Resource efficiency
+- [ ] **Memory optimization** - Performance tuning
+
+#### Advanced Integrations
+- [ ] **OAuth2 support** - Authentication flexibility
+- [ ] **Database integration helpers** - Data persistence
+- [ ] **External service integrations** - Ecosystem connectivity
+
+#### Developer Ecosystem
+- [ ] **Plugin/extension system** - Extensibility framework
+- [ ] **Middleware support** - Request/response pipeline
+- [ ] **Custom serialization/deserialization** - Advanced customization
+- [ ] **Metrics and monitoring** - Production insights
 
 #### Library Features
 - [ ] Plugin system
@@ -202,51 +241,80 @@ impl MessageHandler for CustomHandler {
 - [ ] Best practices guide
 
 ## Community and Ecosystem
-- [ ] Crates.io publication
-- [ ] GitHub repository setup
+- [x] Crates.io publication
+- [x] GitHub repository setup
 - [ ] Discord server for support
-- [ ] Contributor guidelines
-- [ ] Code of conduct
+- [x] Contributor guidelines
+- [x] Code of conduct
 
 ## Version Roadmap
 
-### v0.1.0 (Current)
+### v0.1.0 (Current - Foundation Complete ✅)
 - Basic bot functionality
-- Message handling system
+- Message handling system  
 - HTTP client implementation
 - WebSocket gateway connection
+- Event dispatching system
+- Logging infrastructure
 
-### v0.2.0 (Next)
-- Command framework
-- Slash command support
-- Enhanced error handling
-- Basic documentation
+### v0.1.x (High Priority - Core Stability)
+- **Rate limit handling** (Critical)
+- **Connection reconnection/resuming** (Critical)
+- **Message editing/deletion** (Essential)
+- **Message replies** (Essential)
+- **Enhanced embeds** (Essential)
+- **File attachments** (Essential)
+- **Reactions handling** (Essential)
 
-### v0.3.0 (Future)
-- Interaction handling
-- Cache system
-- Performance optimizations
-- Comprehensive testing
+### v0.2.x (Medium Priority - Bot Framework)
+- **Command framework** with prefix support
+- **Slash commands** support
+- **Basic server management** (guilds, channels, roles)
+- **Member management** (kick, ban, timeout)
+- **Comprehensive documentation**
+- **Integration testing**
 
-### v1.0.0 (Stable)
-- Full feature parity with serenity-rs
-- Production-ready stability
-- Complete documentation
-- Strong ecosystem support
+### v0.3.x (Lower Priority - Advanced Features)
+- **Message threading** and advanced messaging
+- **Interaction components** (buttons, select menus)
+- **Modal dialogs** and context menus
+- **Voice channel** basic support
+- **Webhook management**
+- **Auto-moderation tools**
+
+### v1.0.0 (Future - Production Ready)
+- **Full Discord API coverage**
+- **Production-grade performance** and caching
+- **Comprehensive voice support**
+- **Plugin/middleware system**
+- **Complete ecosystem** with strong community support
 
 ## Contributing
-This project is open for contributions! Key areas where help is needed:
-- [ ] Feature implementation
-- [ ] Documentation writing
-- [ ] Testing and bug fixes
-- [ ] Performance optimization
-- [ ] Example projects
+This project is open for contributions! Key areas where help is needed (prioritized):
+
+### 🚨 **Immediate Priority** (v0.1.x)
+- [ ] **Rate limiting implementation** - Prevent API abuse
+- [ ] **Connection stability** - Reconnection/resuming logic  
+- [ ] **Message operations** - Edit, delete, reply functionality
+- [ ] **Rich content** - Enhanced embeds and file attachments
+- [ ] **Testing infrastructure** - Unit and integration tests
+
+### 🔄 **Next Priority** (v0.2.x)  
+- [ ] **Command framework** - Prefix and slash command systems
+- [ ] **Server management** - Guild, channel, role operations
+- [ ] **Documentation** - Comprehensive guides and API docs
+- [ ] **Example projects** - Learning resources and demos
+
+### 📋 **Future Priority** (v0.3.x+)
+- [ ] **Advanced interactions** - Components, modals, voice
+- [ ] **Performance optimization** - Caching and scalability
+- [ ] **Ecosystem features** - Plugins, middleware, monitoring
 
 ## License
-This project will be licensed under MIT or Apache-2.0 (to be determined).
+This project will be licensed under MIT
 
 ---
 
-**Last Updated:** July 17, 2025
+**Last Updated:** July 21, 2025
 **Current Version:** 0.1.0-dev
-**Next Milestone:** Message Handler System Complete ✅
+**Next Milestone:** Core Stability Features (Rate Limiting & Connection Management) 🚨
