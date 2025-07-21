@@ -311,7 +311,7 @@ This project is open for contributions! Key areas where help is needed (prioriti
 - [ ] **Ecosystem features** - Plugins, middleware, monitoring
 
 ## License
-This project will be licensed under MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
