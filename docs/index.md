@@ -1,6 +1,10 @@
 <div align="center">
   <img src="images/rustycord-logo.png" alt="rustycord Logo" width="128" height="128">
   
+  # rustycord 🦀
+  
+  [![Crates.io](https://img.shields.io/crates/v/rustycord.svg)](https://crates.io/crates/rustycord) [![Documentation](https://docs.rs/rustycord/badge.svg)](https://docs.rs/rustycord) [![dependency status](https://deps.rs/repo/github/iamdhakrey/rustycord/status.svg)](https://deps.rs/repo/github/iamdhakrey/rustycord) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/iamdhakrey/rustycord/blob/main/LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/iamdhakrey/rustycord.svg)](https://github.com/iamdhakrey/rustycord/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/iamdhakrey/rustycord.svg)](https://github.com/iamdhakrey/rustycord/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/iamdhakrey/rustycord.svg)](https://github.com/iamdhakrey/rustycord/pulls) [![Rust](https://img.shields.io/badge/rust-1.60%2B-orange.svg)](https://www.rust-lang.org) [![Discord API](https://img.shields.io/badge/discord%20api-v10-7289da.svg)](https://discord.com/developers/docs/) [![Downloads](https://img.shields.io/crates/d/rustycord.svg)](https://crates.io/crates/rustycord)
+  
 </div>
 
 A fast, lightweight, and feature-rich Discord bot library written in Rust.
