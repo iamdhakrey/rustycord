@@ -1,4 +1,4 @@
-site_name: rustycord
+site_name: RustyCord
 site_description: A modern, fast, and easy-to-use Discord bot library for Rust - DEVELOPMENT VERSION - NOT PRODUCTION READY
 site_author: Hrithik Dhakrey
 site_url: https://rustycord.iamdhakrey.dev
@@ -39,6 +39,13 @@ theme:
     - announce.dismiss
   icon:
     repo: fontawesome/brands/github
+    logo: material/robot  # Alternative to image logo
+    edit: material/pencil
+    view: material/eye
+    tag:
+      default: material/tag
+      rust: simple/rust
+      discord: fontawesome/brands/discord
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
@@ -86,8 +93,19 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/iamdhakrey
+      name: GitHub Profile
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/iamdhakrey/rustycord
+      name: rustycord Repository
     - icon: fontawesome/brands/discord
       link: https://discord.gg/rustycord
+      name: Discord Community
+    - icon: simple/rust
+      link: https://crates.io/crates/rustycord
+      name: Crates.io Package
+    - icon: material/book-open
+      link: https://docs.rs/rustycord
+      name: API Documentation
   version:
     provider: github
     repo: iamdhakrey/rustycord
@@ -101,19 +119,19 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Development Status: development-status.md
-  - Getting Started:
-    - Installation: getting-started/installation.md
-    - Your First Bot: getting-started/first-bot.md
-  - User Guide:
-    - Bot Basics: user-guide/bot-basics.md
-    - Prefix Commands: user-guide/prefix-commands.md
-  - Examples:
-    - Basic Bot: examples/basic-bot.md
-    - Message Handlers: examples/message-handler.md
-    - Rich Embeds: examples/embeds.md
-    - Logging Setup: examples/logging.md
-  - API Reference:
-    - Client: api/client.md
-  - Brand Assets: assets.md
-  - Troubleshooting: troubleshooting.md
+  - "📊 Development Status": development-status.md
+  - "🚀 Getting Started":
+    - "⚙️ Installation": getting-started/installation.md
+    - "🤖 Your First Bot": getting-started/first-bot.md
+  - "📖 User Guide":
+    - "🔧 Bot Basics": user-guide/bot-basics.md
+    - "⌨️ Prefix Commands": user-guide/prefix-commands.md
+  - "💡 Examples":
+    - "🎯 Basic Bot": examples/basic-bot.md
+    - "📨 Message Handlers": examples/message-handler.md
+    - "🎨 Rich Embeds": examples/embeds.md
+    - "📝 Logging Setup": examples/logging.md
+  - "📚 API Reference":
+    - "🔌 Client": api/client.md
+  - "🎨 Brand Assets": assets.md
+  - "🔧 Troubleshooting": troubleshooting.md
