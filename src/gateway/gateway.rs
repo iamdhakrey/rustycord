@@ -241,7 +241,7 @@ impl DiscordWebSocket {
                     "📥 Received text message from gateway (length: {} chars)",
                     text.len()
                 );
-                text
+                text.to_string()
             }
             Message::Binary(data) => {
                 log::debug!(
@@ -297,7 +297,7 @@ impl DiscordWebSocket {
     /// println!("Created heartbeat message data: {:?}", heartbeat_data);
     /// ```
     pub async fn send_json(&mut self, message: WebSocketMessage) -> bool {
-        let message = Message::Text(serde_json::to_string(&message).unwrap());
+        let message = Message::Text(serde_json::to_string(&message).unwrap().into());
         match self.0.send(message).await {
             Ok(_) => true,
 
