@@ -262,7 +262,7 @@ pub struct ChannelMessage {
 
     /// type of message
     ///
-    /// TODO: https://discord.com/developers/docs/resources/message#message-object-message-types
+    /// TODO: <https://discord.com/developers/docs/resources/message#message-object-message-types>
     pub r#type: i32,
 
     /// sent with Rich Presence-related chat embeds

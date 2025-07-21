@@ -19,7 +19,7 @@ use tokio_tungstenite::{connect_async, tungstenite::Message, MaybeTlsStream, Web
 pub enum WebSocketReceiveData {}
 
 /// Receive Message from the gateway
-/// https://discord.com/developers/docs/topics/gateway-events#receive-events
+/// <https://discord.com/developers/docs/topics/gateway-events#receive-events>
 ///
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ReceiveMessageOpcode {
@@ -28,7 +28,7 @@ pub struct ReceiveMessageOpcode {
 }
 
 /// Identifies the client to the gateway.
-/// https://discord.com/developers/docs/topics/gateway-events#identify-identify-connection-properties
+/// <https://discord.com/developers/docs/topics/gateway-events#identify-identify-connection-properties>
 #[derive(Debug, Serialize)]
 pub struct IdentifyProperties {
     /// Your operating system.
@@ -41,7 +41,7 @@ pub struct IdentifyProperties {
     device: String,
 }
 
-/// https://discord.com/developers/docs/topics/gateway-events#activity-object-activity-types
+/// <https://discord.com/developers/docs/topics/gateway-events#activity-object-activity-types>
 #[derive(Debug, Serialize, Clone)]
 pub enum ActivityType {
     Game = 0,
@@ -53,7 +53,7 @@ pub enum ActivityType {
 }
 
 /// The activity object that the user is doing.
-/// https://discord.com/developers/docs/topics/gateway-events#activity-object-activity-structure
+/// <https://discord.com/developers/docs/topics/gateway-events#activity-object-activity-structure>
 ///
 /// Note Bot users are only able to set name, state, type, and url.
 #[derive(Debug, Serialize, Clone)]
@@ -72,7 +72,7 @@ pub struct Activity {
 }
 
 /// Sent by the client to indicate a presence or status update.
-/// https://discord.com/developers/docs/topics/gateway-events#update-presence
+/// <https://discord.com/developers/docs/topics/gateway-events#update-presence>
 #[derive(Debug, Serialize, Clone)]
 pub struct PresenceUpdate {
     /// Unix time (in milliseconds) of when the client went idle, or null if the client is not idle.
@@ -94,11 +94,11 @@ pub struct PresenceUpdate {
 
 pub enum WebSocketMessageData {
     /// the heartbeat interval that the client should heartbeat to.
-    /// https://discord.com/developers/docs/topics/gateway-events#heartbeat/
+    /// <https://discord.com/developers/docs/topics/gateway-events#heartbeat/>
     Heartbeat(u64),
 
     /// Used to trigger the initial handshake with the gateway.
-    /// https://discord.com/developers/docs/topics/gateway-events#identify-identify-structure
+    /// <https://discord.com/developers/docs/topics/gateway-events#identify-identify-structure>
     Identify {
         /// authentication token
         token: String,
@@ -125,7 +125,7 @@ pub enum WebSocketMessageData {
     },
 
     /// Sent by the client to indicate a presence or status update.
-    /// https://discord.com/developers/docs/topics/gateway-events#update-presence
+    /// <https://discord.com/developers/docs/topics/gateway-events#update-presence>
     PresenceUpdate(PresenceUpdate),
 }
 //  "properties": {"$os": "linux", "$browser": "rustycord", "$device": "rustycord"};
