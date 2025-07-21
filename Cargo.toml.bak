@@ -1,6 +1,6 @@
 [package]
 name = "rustycord"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A fast, lightweight, and feature-rich Discord bot library written in Rust."
 license = "MIT"
@@ -16,7 +16,7 @@ rustdoc-args = ["--html-before-content", "docs-warning.html"]
 [dependencies]
 async-trait = "0.1"
 chrono = "0.4.38"
-fern = { version = "0.6.2", features = ["chrono", "colored"] }
+fern = { version = "0.7.1", features = ["chrono", "colored"] }
 flate2 = { version = "1.0.34", features = ["zlib"] }
 futures = "0.3.31"
 log = "0.4.22"
@@ -25,4 +25,4 @@ reqwest = { version = "0.12.8", features = ["json"] }
 serde = { version = "1.0.210", features = ["derive"] }
 serde_json = "1.0.128"
 tokio = { version = "1.40.0", features = ["full"] }
-tokio-tungstenite = { version = "0.24.0", features = ["native-tls", "url"] }
+tokio-tungstenite = { version = "0.27.0", features = ["native-tls", "url"] }
