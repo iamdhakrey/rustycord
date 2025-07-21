@@ -282,13 +282,34 @@ pub struct ChannelMessage {
 }
 
 /// Represent a message sent in a channel
-/// 
+///
 /// More: https://discord.com/developers/docs/resources/channel#message-object-message-activity-structure
-/// 
+///
 /// - Note: Field specific to the `MESSAGE_CREATE` and `MESSAGE_UPDATE` events are listed in the Gateway Documentation
 /// - Note: An app will receive empty values in the `content`, `embeds`, `attachement` and `component` fields while `poll`
 impl ChannelMessage {
-    pub fn new(id: String, channel_id: String, author: User, content: String, timestamp: String, tts: bool, mention_everyone: bool, mentions: Vec<User>, mention_roles: Vec<Role>, attachments: Vec<Attachments>, embeds: Vec<Embed>, reactions: Option<Vec<Reaction>>, nonce: Option<String>, pinned: bool, webhook_id: Option<String>, r#type: i32, activity: Option<MessageActivity>, application: Option<Application>, application_id: String, flags: usize) -> Self {
+    pub fn new(
+        id: String,
+        channel_id: String,
+        author: User,
+        content: String,
+        timestamp: String,
+        tts: bool,
+        mention_everyone: bool,
+        mentions: Vec<User>,
+        mention_roles: Vec<Role>,
+        attachments: Vec<Attachments>,
+        embeds: Vec<Embed>,
+        reactions: Option<Vec<Reaction>>,
+        nonce: Option<String>,
+        pinned: bool,
+        webhook_id: Option<String>,
+        r#type: i32,
+        activity: Option<MessageActivity>,
+        application: Option<Application>,
+        application_id: String,
+        flags: usize,
+    ) -> Self {
         Self {
             id,
             channel_id,
@@ -314,9 +335,7 @@ impl ChannelMessage {
         }
     }
 
-    pub async fn send(&self,message:String) -> () {
+    pub async fn send(&self, message: String) -> () {
         println!("Message sent: {}", message);
-        
     }
-
 }
