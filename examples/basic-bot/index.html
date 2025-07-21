@@ -12,13 +12,13 @@
         <meta name="author" content="Hrithik Dhakrey">
       
       
-        <link rel="canonical" href="https://rustycord.iamdhakrey.dev/getting-started/installation/">
+        <link rel="canonical" href="https://rustycord.iamdhakrey.dev/examples/basic-bot/">
       
       
-        <link rel="prev" href="../../development-status/">
+        <link rel="prev" href="../../user-guide/prefix-commands/">
       
       
-        <link rel="next" href="../first-bot/">
+        <link rel="next" href="../message-handler/">
       
       
       <link rel="icon" href="../../images/rustycord-favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Installation - rustycord</title>
+        <title>Basic Bot - rustycord</title>
       
     
     
@@ -121,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#basic-bot-example" class="md-skip">
           Skip to content
         </a>
       
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Basic Bot
             
           </span>
         </div>
@@ -331,13 +331,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
           
   
   
@@ -373,11 +371,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../examples/basic-bot/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -539,31 +539,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -576,7 +573,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -587,32 +584,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Installation
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -623,155 +598,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Rust
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a New Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-rustycord-dependency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding rustycord Dependency
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-up-your-discord-bot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting Up Your Discord Bot
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Setting Up Your Discord Bot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-discord-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Create a Discord Application
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-configure-bot-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Configure Bot Permissions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-set-up-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Set Up Environment Variables
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verifying Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Help
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -784,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-bot/" class="md-nav__link">
+      <a href="../../getting-started/first-bot/" class="md-nav__link">
         
   
   
@@ -909,28 +735,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -943,7 +772,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -954,10 +783,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../examples/basic-bot/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Basic Bot
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -968,6 +819,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Bot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-demonstrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features Demonstrated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -980,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/message-handler/" class="md-nav__link">
+      <a href="../message-handler/" class="md-nav__link">
         
   
   
@@ -1003,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/embeds/" class="md-nav__link">
+      <a href="../embeds/" class="md-nav__link">
         
   
   
@@ -1026,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -1204,78 +1138,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-rust" class="md-nav__link">
+  <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Rust
+      Code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-project" class="md-nav__link">
+  <a href="#environment-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New Project
+      Environment Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-rustycord-dependency" class="md-nav__link">
+  <a href="#running-the-bot" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding rustycord Dependency
+      Running the Bot
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-your-discord-bot" class="md-nav__link">
+  <a href="#features-demonstrated" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Your Discord Bot
+      Features Demonstrated
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Setting Up Your Discord Bot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-discord-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Create a Discord Application
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-configure-bot-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Configure Bot Permissions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-set-up-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Set Up Environment Variables
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-installation" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Verifying Installation
+      Commands
     </span>
   </a>
   
@@ -1287,39 +1188,6 @@
       Next Steps
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Help
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1342,171 +1210,110 @@
   
 
 
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">Development Version Warning</p>
-<p><strong>rustycord is currently in heavy development and is NOT ready for production use.</strong></p>
-<ul>
-<li>🚨 <strong>Breaking changes occur frequently</strong></li>
-<li>🚨 <strong>APIs are unstable and will change</strong></li>
-<li>🚨 <strong>Features are incomplete</strong></li>
-<li>🚨 <strong>Not suitable for production bots</strong></li>
-</ul>
-<p><strong>Only use for learning, experimentation, and development.</strong> Do not deploy bots using this library to production environments.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Development Status</p>
-<p>This library is actively being developed. While basic functionality works, many features are missing or incomplete. Check the <a href="https://github.com/iamdhakrey/rustycord">GitHub repository</a> for the latest status.</p>
-</div>
+<h1 id="basic-bot-example">Basic Bot Example<a class="headerlink" href="#basic-bot-example" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to create a simple Discord bot using rustycord.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>Before installing rustycord, make sure you have:</p>
 <ul>
-<li><strong>Rust 1.70.0 or later</strong> - <a href="https://rustup.rs/">Install Rust</a></li>
-<li><strong>Git</strong> - For cloning repositories</li>
-<li><strong>Discord Bot Token</strong> - <a href="https://discord.com/developers/applications">Create a Discord Application</a></li>
+<li>Rust 1.70 or later</li>
+<li>A Discord application and bot token</li>
 </ul>
-<h2 id="installing-rust">Installing Rust<a class="headerlink" href="#installing-rust" title="Permanent link">&para;</a></h2>
-<p>If you don't have Rust installed, you can install it using rustup:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>~/.cargo/env
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">use</span><span class="w"> </span><span class="n">rustycord</span><span class="p">::{</span><span class="n">Bot</span><span class="p">,</span><span class="w"> </span><span class="n">Client</span><span class="p">,</span><span class="w"> </span><span class="n">MessageHandler</span><span class="p">,</span><span class="w"> </span><span class="n">logger</span><span class="p">};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">use</span><span class="w"> </span><span class="n">rustycord</span><span class="p">::</span><span class="n">models</span><span class="p">::</span><span class="n">Message</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">use</span><span class="w"> </span><span class="n">async_trait</span><span class="p">::</span><span class="n">async_trait</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">#[tokio::main]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Result</span><span class="o">&lt;</span><span class="p">(),</span><span class="w"> </span><span class="nb">Box</span><span class="o">&lt;</span><span class="k">dyn</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">error</span><span class="p">::</span><span class="n">Error</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// Initialize logging with info level</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">logger</span><span class="p">::</span><span class="n">setup_logger</span><span class="p">(</span><span class="s">&quot;info&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">())</span><span class="o">?</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// Get bot token from environment variable</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">env</span><span class="p">::</span><span class="n">var</span><span class="p">(</span><span class="s">&quot;DISCORD_TOKEN&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Expected DISCORD_TOKEN environment variable&quot;</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">// Create a new bot instance</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">bot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bot</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="nb">None</span><span class="p">).</span><span class="k">await</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="c1">// Login the bot</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">user_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bot</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">token</span><span class="p">).</span><span class="k">await</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Bot logged in as: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">user_response</span><span class="p">.</span><span class="n">username</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="c1">// Register message handlers</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">bot</span><span class="p">.</span><span class="n">register_message_handler</span><span class="p">(</span><span class="nb">Box</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">PingHandler</span><span class="p">));</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">bot</span><span class="p">.</span><span class="n">register_message_handler</span><span class="p">(</span><span class="nb">Box</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">EchoHandler</span><span class="p">));</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="c1">// Start the bot (this will block until the bot is stopped)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">bot</span><span class="p">.</span><span class="n">start</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="sd">/// A simple ping-pong handler</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">struct</span><span class="w"> </span><span class="nc">PingHandler</span><span class="p">;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="cp">#[async_trait]</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">impl</span><span class="w"> </span><span class="n">MessageHandler</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">PingHandler</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">handle_message</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="nc">Message</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Result</span><span class="o">&lt;</span><span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nb">Box</span><span class="o">&lt;</span><span class="k">dyn</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">error</span><span class="p">::</span><span class="n">Error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Send</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Sync</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">content</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;!ping&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">            </span><span class="nb">Ok</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="s">&quot;Pong! 🏓&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">()))</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">            </span><span class="nb">Ok</span><span class="p">(</span><span class="nb">None</span><span class="p">)</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="p">}</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="sd">/// An echo handler that repeats user input</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="k">struct</span><span class="w"> </span><span class="nc">EchoHandler</span><span class="p">;</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="cp">#[async_trait]</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="k">impl</span><span class="w"> </span><span class="n">MessageHandler</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">EchoHandler</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">handle_message</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="nc">Message</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Result</span><span class="o">&lt;</span><span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nb">Box</span><span class="o">&lt;</span><span class="k">dyn</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">error</span><span class="p">::</span><span class="n">Error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Send</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Sync</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">starts_with</span><span class="p">(</span><span class="s">&quot;!echo &quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">strip_prefix</span><span class="p">(</span><span class="s">&quot;!echo &quot;</span><span class="p">).</span><span class="n">unwrap_or</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">            </span><span class="nb">Ok</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;🔊 {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">)))</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">            </span><span class="nb">Ok</span><span class="p">(</span><span class="nb">None</span><span class="p">)</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Verify your installation:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rustc<span class="w"> </span>--version
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cargo<span class="w"> </span>--version
-</span></code></pre></div>
-<h2 id="creating-a-new-project">Creating a New Project<a class="headerlink" href="#creating-a-new-project" title="Permanent link">&para;</a></h2>
-<p>Create a new Rust project for your Discord bot:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cargo<span class="w"> </span>new<span class="w"> </span>my-discord-bot
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>my-discord-bot
-</span></code></pre></div>
-<h2 id="adding-rustycord-dependency">Adding rustycord Dependency<a class="headerlink" href="#adding-rustycord-dependency" title="Permanent link">&para;</a></h2>
-<p>Add rustycord and required dependencies to your <code>Cargo.toml</code>:</p>
-<div class="language-toml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[package]</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-discord-bot&quot;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">edition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2021&quot;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">[dependencies]</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">rustycord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">tokio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">&quot;1.40&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;full&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">async-trait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.1&quot;</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.4&quot;</span>
-</span></code></pre></div>
-<h2 id="setting-up-your-discord-bot">Setting Up Your Discord Bot<a class="headerlink" href="#setting-up-your-discord-bot" title="Permanent link">&para;</a></h2>
-<h3 id="1-create-a-discord-application">1. Create a Discord Application<a class="headerlink" href="#1-create-a-discord-application" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Go to the <a href="https://discord.com/developers/applications">Discord Developer Portal</a></li>
-<li>Click "New Application"</li>
-<li>Give your application a name</li>
-<li>Navigate to the "Bot" section</li>
-<li>Click "Add Bot"</li>
-<li>Copy your bot token (keep this secret!)</li>
-</ol>
-<h3 id="2-configure-bot-permissions">2. Configure Bot Permissions<a class="headerlink" href="#2-configure-bot-permissions" title="Permanent link">&para;</a></h3>
-<p>In the "Bot" section of your application:</p>
-<ol>
-<li>Enable the following <strong>Privileged Gateway Intents</strong>:</li>
-<li>Message Content Intent (if you need to read message content)</li>
-<li>Server Members Intent (if you need member information)</li>
-<li>
-<p>Presence Intent (if you need presence information)</p>
-</li>
-<li>
-<p>In the "OAuth2" &gt; "URL Generator" section:</p>
-</li>
-<li>Select "bot" scope</li>
-<li>
-<p>Select required permissions:</p>
-<ul>
-<li>Send Messages</li>
-<li>Read Message History</li>
-<li>Use Slash Commands (if needed)</li>
-</ul>
-</li>
-<li>
-<p>Use the generated URL to invite your bot to a server</p>
-</li>
-</ol>
-<h3 id="3-set-up-environment-variables">3. Set Up Environment Variables<a class="headerlink" href="#3-set-up-environment-variables" title="Permanent link">&para;</a></h3>
+<h2 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h2>
 <p>Create a <code>.env</code> file in your project root:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>DISCORD_TOKEN=your_bot_token_here
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">DISCORD_TOKEN</span><span class="o">=</span>your_bot_token_here
 </span></code></pre></div>
-<p>Add <code>.env</code> to your <code>.gitignore</code>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>.env
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>target/
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Cargo.lock
-</span></code></pre></div>
-<h2 id="verifying-installation">Verifying Installation<a class="headerlink" href="#verifying-installation" title="Permanent link">&para;</a></h2>
-<p>Create a simple test bot in <code>src/main.rs</code>:</p>
-<div class="language-rust highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">use</span><span class="w"> </span><span class="n">rustycord</span><span class="p">::{</span><span class="n">Bot</span><span class="p">,</span><span class="w"> </span><span class="n">Client</span><span class="p">,</span><span class="w"> </span><span class="n">logger</span><span class="p">};</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cp">#[tokio::main]</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Result</span><span class="o">&lt;</span><span class="p">(),</span><span class="w"> </span><span class="nb">Box</span><span class="o">&lt;</span><span class="k">dyn</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">error</span><span class="p">::</span><span class="n">Error</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="c1">// Load environment variables</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">dotenv</span><span class="p">::</span><span class="n">dotenv</span><span class="p">().</span><span class="n">ok</span><span class="p">();</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="c1">// Initialize logging</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">logger</span><span class="p">::</span><span class="n">setup_logger</span><span class="p">(</span><span class="n">logger</span><span class="p">::</span><span class="n">LogLevel</span><span class="p">::</span><span class="n">Info</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="c1">// Get bot token</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">env</span><span class="p">::</span><span class="n">var</span><span class="p">(</span><span class="s">&quot;DISCORD_TOKEN&quot;</span><span class="p">)</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;DISCORD_TOKEN environment variable not set&quot;</span><span class="p">);</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="c1">// Create client and bot</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Creating Discord client...&quot;</span><span class="p">);</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Client</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">token</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Starting bot...&quot;</span><span class="p">);</span>
-</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">bot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bot</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">client</span><span class="p">);</span>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="n">bot</span><span class="p">.</span><span class="n">start</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
-</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
-</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span>
-</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>Add the <code>dotenv</code> dependency to your <code>Cargo.toml</code>:</p>
-<div class="language-toml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[dependencies]</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># ... existing dependencies</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">dotenv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.15&quot;</span>
-</span></code></pre></div>
-<p>Run your bot:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cargo<span class="w"> </span>run
-</span></code></pre></div>
-<p>You should see log output indicating your bot has connected to Discord!</p>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Now that you have rustycord installed and a basic bot running:</p>
-<ul>
-<li><a href="../first-bot/">Create Your First Bot</a> - Build a simple echo bot</li>
-<li><a href="configuration.md">Bot Configuration</a> - Learn about bot settings</li>
-<li><a href="../user-guide/message-handlers.md">Message Handlers</a> - Handle user messages</li>
-</ul>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
-<p><strong>Bot token is invalid:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Error: HTTP error: 401 Unauthorized
-</span></code></pre></div>
-- Verify your bot token is correct
-- Make sure there are no extra spaces in your <code>.env</code> file</p>
-<p><strong>Permission denied:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Error: Missing Access
-</span></code></pre></div>
-- Check that your bot has the required permissions in the Discord server
-- Verify the bot is properly invited to the server</p>
-<p><strong>Connection timeout:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Error: Connection timeout
-</span></code></pre></div>
-- Check your internet connection
-- Verify Discord's status at <a href="https://discordstatus.com">discordstatus.com</a></p>
-<h3 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
-<p>If you encounter issues:</p>
+<h2 id="running-the-bot">Running the Bot<a class="headerlink" href="#running-the-bot" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Check the <a href="../../troubleshooting/">troubleshooting guide</a></li>
-<li>Search <a href="https://github.com/iamdhakrey/rustycord/issues">GitHub Issues</a></li>
-<li>Create a new issue with:</li>
-<li>Your Rust version (<code>rustc --version</code>)</li>
-<li>Your operating system</li>
-<li>Complete error messages</li>
-<li>Minimal reproduction code</li>
+<li>
+<p>Set up your environment variable:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DISCORD_TOKEN</span><span class="o">=</span><span class="s2">&quot;your_bot_token_here&quot;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Run the bot:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cargo<span class="w"> </span>run
+</span></code></pre></div></p>
+</li>
 </ol>
+<h2 id="features-demonstrated">Features Demonstrated<a class="headerlink" href="#features-demonstrated" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Bot Initialization</strong>: Creating and configuring a bot instance</li>
+<li><strong>Login</strong>: Authenticating with Discord</li>
+<li><strong>Message Handlers</strong>: Responding to specific commands</li>
+<li><strong>Logging</strong>: Setting up structured logging</li>
+<li><strong>Async Operations</strong>: Using Rust's async/await for non-blocking operations</li>
+</ul>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>Once the bot is running, you can test these commands in your Discord server:</p>
+<ul>
+<li><code>!ping</code> - Bot responds with "Pong! 🏓"</li>
+<li><code>!echo &lt;message&gt;</code> - Bot echoes your message with a speaker emoji</li>
+</ul>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../user-guide/prefix-commands/">Message Handler Guide</a> - Learn more about message handling</li>
+<li><a href="../embeds/">Embeds Example</a> - Add rich embed responses</li>
+<li><a href="../logging/">Logging Example</a> - Advanced logging configuration</li>
+</ul>
 
 
 

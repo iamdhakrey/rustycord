@@ -2,30 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rustycord.iamdhakrey.dev/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/architecture-summary/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/architecture/</loc>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/assets/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/development-status/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/troubleshooting/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/api/client/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/examples/basic-bot/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/examples/embeds/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/examples/logging/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/examples/message-handler/</loc>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/getting-started/first-bot/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/getting-started/installation/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/images/architecture-diagrams/</loc>
+         <lastmod>2025-07-21</lastmod>
+    </url>
+    <url>
+         <loc>https://rustycord.iamdhakrey.dev/user-guide/bot-basics/</loc>
+         <lastmod>2025-07-21</lastmod>
     </url>
     <url>
          <loc>https://rustycord.iamdhakrey.dev/user-guide/prefix-commands/</loc>
-         <lastmod>2025-07-18</lastmod>
+         <lastmod>2025-07-21</lastmod>
     </url>
 </urlset>
