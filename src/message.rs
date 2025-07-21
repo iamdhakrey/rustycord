@@ -4,7 +4,7 @@ use crate::{application::Application, embeds::Embed, models::user::User};
 
 /// Represent a role tags
 ///
-/// More: https://discord.com/developers/docs/topics/permissions#role-object-role-tags-structure
+/// More: <https://discord.com/developers/docs/topics/permissions#role-object-role-tags-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct RoleTags {
     /// the id of the bot this role belongs to
@@ -19,7 +19,7 @@ pub struct RoleTags {
 
 /// Represent a role in a guild
 ///
-/// More: https://discord.com/developers/docs/topics/permissions#role-object
+/// More: <https://discord.com/developers/docs/topics/permissions#role-object>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Role {
     /// The id of the role
@@ -62,8 +62,7 @@ pub struct Role {
 
 /// Represent an attachment in a message
 ///
-/// More: https://discord.com/developers/docs/resources/channel#attachment-object
-///
+/// More: <https://discord.com/developers/docs/resources/channel#attachment-object>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Attachments {
     /// the id of the attachment
@@ -142,7 +141,7 @@ pub struct ReactionCountDetails {
 }
 
 /// Emoji information
-/// More: https://discord.com/developers/docs/resources/emoji#emoji-object
+/// More: <https://discord.com/developers/docs/resources/emoji#emoji-object>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Emoji {
     /// emoji id
@@ -197,7 +196,7 @@ pub struct MessageActivity {
 /// - Note: An app will receive empty values in the `content`, `embeds`, `attachement` and `component` fields while `poll`
 /// will be ommited if they have not configured the `MESSAGE_CONTENT` intent
 ///
-/// More: https://discord.com/developers/docs/resources/message#message-object
+/// More: <https://discord.com/developers/docs/resources/message#message-object>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ChannelMessage {
     /// The id of the message
@@ -283,7 +282,7 @@ pub struct ChannelMessage {
 
 /// Represent a message sent in a channel
 ///
-/// More: https://discord.com/developers/docs/resources/channel#message-object-message-activity-structure
+/// More: <https://discord.com/developers/docs/resources/channel#message-object-message-activity-structure>
 ///
 /// - Note: Field specific to the `MESSAGE_CREATE` and `MESSAGE_UPDATE` events are listed in the Gateway Documentation
 /// - Note: An app will receive empty values in the `content`, `embeds`, `attachement` and `component` fields while `poll`

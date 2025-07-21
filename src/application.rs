@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 ///
 /// Applications (or "apps") are containers for developer platform features, and can be installed to Discord servers and/or user accounts.
 ///
-/// More: https://discord.com/developers/docs/resources/application#application-object
+/// More: <https://discord.com/developers/docs/resources/application#application-object>
 ///
 /// - TODO: add full
 #[derive(Serialize, Deserialize, Debug)]

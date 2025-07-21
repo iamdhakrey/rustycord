@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 /// Represent an embed in a message
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object
+/// More: <https://discord.com/developers/docs/resources/message#embed-object>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Embed {
     /// title of embed
@@ -75,7 +75,7 @@ pub enum EmbedType {
 
 /// Represent an embed footer
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-footer-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-footer-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedFooter {
     /// footer text
@@ -90,7 +90,7 @@ pub struct EmbedFooter {
 
 /// Represent an embed image
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-image-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-image-structure>
 #[derive(Serialize, Deserialize, Debug)]
 
 pub struct EmbedImage {
@@ -109,7 +109,7 @@ pub struct EmbedImage {
 
 /// Represent an embed thumbnail
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-thumbnail-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-thumbnail-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedThumbnail {
     /// source url of thumbnail (only supports http(s) and attachments)
@@ -127,7 +127,7 @@ pub struct EmbedThumbnail {
 
 /// Represent an embed video
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-video-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-video-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedVideo {
     /// source url of video
@@ -145,7 +145,7 @@ pub struct EmbedVideo {
 
 /// Represent an embed provider
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-provider-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-provider-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedProvider {
     /// name of provider
@@ -157,7 +157,7 @@ pub struct EmbedProvider {
 
 /// Represent an embed author
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-author-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-author-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedAuthor {
     /// name of author
@@ -175,7 +175,7 @@ pub struct EmbedAuthor {
 
 /// Represent an embed field
 ///
-/// More: https://discord.com/developers/docs/resources/message#embed-object-embed-field-structure
+/// More: <https://discord.com/developers/docs/resources/message#embed-object-embed-field-structure>
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EmbedField {
     /// name of the field
@@ -266,7 +266,7 @@ impl Embed {
             value: value.to_string(),
             inline: Some(inline),
         };
-        
+
         match self.fields {
             Some(ref mut fields) => fields.push(field),
             None => self.fields = Some(vec![field]),
