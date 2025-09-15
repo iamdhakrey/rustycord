@@ -12,7 +12,7 @@ readme = "README.md"
 
 [dependencies]
 async-trait = "0.1"
-chrono = "0.4.38"
+chrono = "0.4.42"
 fern = { version = "0.7.1", features = ["chrono", "colored"] }
 flate2 = { version = "1.0.34", features = ["zlib"] }
 futures = "0.3.31"
