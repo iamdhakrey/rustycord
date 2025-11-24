@@ -17,7 +17,7 @@ fern = { version = "0.7.1", features = ["chrono", "colored"] }
 flate2 = { version = "1.1.5", features = ["zlib"] }
 futures = "0.3.31"
 log = "0.4.28"
-os_info = "3.8.2"
+os_info = "3.13.0"
 reqwest = { version = "0.12.23", features = ["json"] }
 serde = { version = "1.0.210", features = ["derive"] }
 serde_json = "1.0.145"
